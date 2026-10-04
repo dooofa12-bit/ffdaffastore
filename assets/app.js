@@ -10,7 +10,7 @@ let showAllReviews = false;
 // ─── i18n strings ───────────────────────────────────────────────────────────
 const i18n = {
   en: {
-    "nav.store": "Order / Contact",
+    "nav.store": "Toko Itemku",
     "nav.request": "Request Account",
     "hero.eyebrow": "Verified Direct Store & Trusted Escrow",
     "hero.line1": "Honkai: Star Rail",
@@ -56,7 +56,7 @@ const i18n = {
     "footer.privacy": "Privacy Policy"
   },
   id: {
-    "nav.store": "Order / Kontak",
+    "nav.store": "Toko Itemku",
     "nav.request": "Request Akun",
     "hero.eyebrow": "Toko Resmi Terverifikasi & Opsi Escrow",
     "hero.line1": "Honkai: Star Rail",
