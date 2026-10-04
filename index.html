@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FFdaffastore — Honkai: Star Rail Verified Store</title>
+  <meta name="description" content="FFdaffastore — trusted Honkai: Star Rail account store. 500+ sold. 3-month warranty, direct order or escrow, anti-hackback guarantee.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FFdaffastore">
+  <meta property="og:title" content="FFdaffastore — Honkai: Star Rail Verified Store">
+  <meta property="og:description" content="Trusted HSR account store. 500+ sold. 3-month warranty, direct order or escrow, anti-hackback guarantee.">
+  <meta property="og:image" content="assets/img/hero-bg.webp">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="id_ID">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" href="favicon.ico">
+  <link rel="canonical" href="./">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { 50:'#FFFBEB', 100:'#FEF3C7', 200:'#FDE68A', 300:'#FCD34D', 400:'#FBBF24', 500:'#CA8A04', 600:'#A16207', 700:'#854D0E', 800:'#713F12', 900:'#422006' },
+            ink: { 50:'#FAFAF9', 100:'#F5F5F4', 200:'#E7E5E4', 300:'#D6D3D1', 400:'#A8A29E', 500:'#78716C', 600:'#57534E', 700:'#44403C', 800:'#292524', 900:'#1C1917' }
+          },
+          fontFamily: {
+            heading: ['Cormorant', 'serif'],
+            body: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="bg-ink-50 text-ink-900 font-body antialiased">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav id="navbar" class="fixed top-4 left-4 right-4 z-50 bg-white/90 backdrop-blur border border-ink-200 rounded-2xl shadow-sm transition-shadow duration-200">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
+      <a href="#" class="flex items-center gap-2.5 cursor-pointer">
+        <img src="assets/img/logo.webp" alt="FFdaffastore logo" class="w-9 h-9 rounded-full border-2 border-gold-300 object-cover flex-shrink-0">
+        <span class="font-heading text-2xl font-bold text-ink-900 tracking-tight">FFdaffastore</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-600">
+        <a href="#catalog" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer">Catalog</a>
+        <a href="request.html" class="text-gold-600 hover:text-gold-700 font-semibold transition-colors duration-200 cursor-pointer flex items-center gap-1.5">
+          <span data-i18n="nav.request">Request Akun</span>
+          <span class="text-[9px] bg-gold-100 text-gold-800 font-bold px-1.5 py-0.5 rounded">NEW</span>
+        </a>
+        <a href="#testimonials" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer">Proof</a>
+        <a href="#guarantee" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer">Guarantee</a>
+        <a href="#faq" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer">FAQ</a>
+        <a href="#contact" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="langToggle" class="text-xs font-semibold text-ink-500 border border-ink-300 rounded-lg px-3 py-1.5 hover:border-gold-400 hover:text-gold-600 transition-colors duration-200 cursor-pointer">EN / ID</button>
+        <a id="storeBtn" href="#" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 bg-gold-500 text-white text-sm font-semibold px-5 py-2 rounded-xl hover:bg-gold-600 transition-colors duration-200 cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
+          <span data-i18n="nav.store">Visit Store</span>
+        </a>
+        <button id="menuBtn" class="md:hidden p-2 text-ink-700 hover:text-gold-500 transition-colors duration-200 cursor-pointer" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-ink-200 px-6 pb-4 pt-2 space-y-3 text-sm font-medium text-ink-600">
+      <a href="#catalog" class="block hover:text-gold-500 cursor-pointer">Catalog</a>
+      <a href="request.html" class="block text-gold-600 font-semibold cursor-pointer">Request Akun (Jasa Cari)</a>
+      <a href="#testimonials" class="block hover:text-gold-500 cursor-pointer">Proof</a>
+      <a href="#guarantee" class="block hover:text-gold-500 cursor-pointer">Guarantee</a>
+      <a href="#faq" class="block hover:text-gold-500 cursor-pointer">FAQ</a>
+      <a href="#contact" class="block hover:text-gold-500 cursor-pointer">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <header class="relative pt-32 pb-20 px-4 overflow-hidden">
+    <!-- Background Banner HSR -->
+    <div class="absolute inset-0 pointer-events-none">
+      <img src="assets/img/hero-bg.webp" alt="Honkai Star Rail Hero" class="w-full h-full object-cover object-top opacity-40 filter blur-[0.5px] scale-105">
+      <div class="absolute inset-0 bg-gradient-to-b from-ink-50/50 via-ink-50/70 to-ink-50"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto text-center">
+      <p class="text-gold-500 font-semibold text-sm tracking-widest uppercase mb-4" data-i18n="hero.eyebrow">Verified Direct Store & Trusted Escrow</p>
+      <h1 class="font-heading text-5xl md:text-7xl font-bold text-ink-900 leading-tight mb-6">
+        <span data-i18n="hero.line1">Honkai: Star Rail</span><br>
+        <span class="text-gold-500" data-i18n="hero.line2">Verified Store</span>
+      </h1>
+      <p class="text-ink-500 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light" data-i18n="hero.desc">Browse verified accounts. Fast direct transactions or safe marketplace escrow. Full 3-month coverage.</p>
+      <div class="flex flex-wrap justify-center gap-4 mb-14">
+        <a href="#catalog" class="bg-gold-500 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-gold-600 transition-colors duration-200 cursor-pointer" data-i18n="hero.cta1">Browse Catalog</a>
+        <a href="#contact" class="border-2 border-ink-800 text-ink-800 font-semibold px-8 py-3.5 rounded-xl hover:bg-ink-900 hover:text-white transition-colors duration-200 cursor-pointer" data-i18n="hero.cta2">Contact Seller</a>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="bg-white border border-ink-200 rounded-2xl p-6">
+          <p class="font-heading text-3xl font-bold text-gold-500" id="statSold">500+</p>
+          <p class="text-ink-500 text-sm mt-1" data-i18n="stat.sold">Accounts Sold</p>
+        </div>
+        <div class="bg-white border border-ink-200 rounded-2xl p-6">
+          <p class="font-heading text-3xl font-bold text-gold-500" id="statStock">4</p>
+          <p class="text-ink-500 text-sm mt-1" data-i18n="stat.stock">In Stock Now</p>
+        </div>
+        <div class="bg-white border border-ink-200 rounded-2xl p-6">
+          <p class="font-heading text-3xl font-bold text-gold-500" id="statSatisfaction">99.8%</p>
+          <p class="text-ink-500 text-sm mt-1" data-i18n="stat.satisfaction">Satisfaction</p>
+        </div>
+        <div class="bg-white border border-ink-200 rounded-2xl p-6">
+          <p class="font-heading text-3xl font-bold text-gold-500" id="statProcess">&lt; 10m</p>
+          <p class="text-ink-500 text-sm mt-1" data-i18n="stat.process">Avg Handover</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ CATALOG ═══════════ -->
+  <section id="catalog" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-8">
+        <p class="text-gold-500 font-semibold text-sm tracking-widest uppercase mb-3" data-i18n="catalog.eyebrow">Catalog</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-ink-900" data-i18n="catalog.title">Current Listings</h2>
+        <p class="text-ink-500 mt-4 max-w-xl mx-auto" data-i18n="catalog.desc">Each account is vetted, clean history, ready for safe handover through itemku escrow.</p>
+      </div>
+
+      <!-- Catalog Filters -->
+      <div id="catalogFilters" class="flex justify-center gap-2 mb-10">
+        <button data-filter="all" class="filter-btn active text-xs font-semibold px-4 py-2 rounded-xl transition-all duration-200 cursor-pointer bg-ink-900 text-white shadow-sm" data-i18n="catalog.filterAll">Semua (4)</button>
+        <button data-filter="Available" class="filter-btn text-xs font-semibold px-4 py-2 rounded-xl transition-all duration-200 cursor-pointer bg-white text-ink-600 border border-ink-200 hover:border-gold-400" data-i18n="catalog.filterAvail">Tersedia (3)</button>
+        <button data-filter="Reserved" class="filter-btn text-xs font-semibold px-4 py-2 rounded-xl transition-all duration-200 cursor-pointer bg-white text-ink-600 border border-ink-200 hover:border-gold-400" data-i18n="catalog.filterReserved">Tereservasi (1)</button>
+      </div>
+      <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Cards rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CATALOG MODAL ═══════════ -->
+  <div id="catalogModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+    <div id="modalBackdrop" class="absolute inset-0 bg-ink-900/60 backdrop-blur-sm"></div>
+    <div class="relative bg-white rounded-3xl shadow-2xl max-w-lg w-full p-8 animate-in">
+      <button id="modalClose" class="absolute top-5 right-5 text-ink-400 hover:text-ink-900 transition-colors cursor-pointer" aria-label="Close">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div id="modalImg" class="aspect-16-9 img-slot rounded-2xl mb-6 overflow-hidden">
+        <img id="modalImgTag" src="" alt="" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
+        <span class="placeholder-label text-ink-400 text-xs">Image</span>
+      </div>
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <p class="text-xs text-ink-400 font-semibold tracking-widest uppercase" id="modalId"></p>
+          <h3 class="font-heading text-2xl font-bold text-ink-900 mt-0.5" id="modalTitle"></h3>
+        </div>
+        <span id="modalBadge" class="text-xs font-semibold px-3 py-1 rounded-full ml-3 flex-shrink-0"></span>
+      </div>
+      <div class="grid grid-cols-2 gap-3 mb-5" id="modalStats"></div>
+      <div id="modalHighlights" class="flex flex-wrap gap-2 mb-5"></div>
+      <p id="modalDesc" class="text-sm text-ink-500 leading-relaxed mb-6"></p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a id="modalWA" href="#" target="_blank" rel="noopener" class="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold px-5 py-3 rounded-xl hover:bg-[#1da851] transition-colors duration-200 text-sm cursor-pointer">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span id="modalWALabel">WhatsApp</span>
+        </a>
+        <a id="modalItemku" href="#" target="_blank" rel="noopener" class="flex-1 flex items-center justify-center gap-2 bg-gold-500 text-white font-semibold px-5 py-3 rounded-xl hover:bg-gold-600 transition-colors duration-200 text-sm cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
+          <span id="modalItemkuLabel">Escrow Itemku</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ TESTIMONIALS ═══════════ -->
+  <section id="testimonials" class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-8">
+        <p class="text-gold-500 font-semibold text-sm tracking-widest uppercase mb-3" data-i18n="testi.eyebrow">Proof</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-ink-900" data-i18n="testi.title">Transaction History</h2>
+        <p class="text-ink-500 mt-4 max-w-xl mx-auto" data-i18n="testi.desc">Screenshots from real buyers. Verified on itemku.</p>
+      </div>
+
+      <!-- Testimonials Tabs -->
+      <div id="testiTabs" class="flex justify-center gap-2 mb-10 flex-wrap">
+        <button data-tab="all" class="testi-tab active text-xs font-semibold px-4 py-2 rounded-xl transition-all duration-200 cursor-pointer bg-ink-900 text-white shadow-sm" data-i18n="testi.tabAll">Semua Bukti</button>
+        <button data-tab="reviews" class="testi-tab text-xs font-semibold px-4 py-2 rounded-xl transition-all duration-200 cursor-pointer bg-white text-ink-600 border border-ink-200 hover:border-gold-400" data-i18n="testi.tabReviews">Ulasan Itemku (547)</button>
+        <button data-tab="chats" class="testi-tab text-xs font-semibold px-4 py-2 rounded-xl transition-all duration-200 cursor-pointer bg-white text-ink-600 border border-ink-200 hover:border-gold-400" data-i18n="testi.tabChats">Chat Pembeli</button>
+      </div>
+      <div id="testiGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <!-- Rating strip + review cards + chat snippets rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ GUARANTEE ═══════════ -->
+  <section id="guarantee" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-gold-500 font-semibold text-sm tracking-widest uppercase mb-3" data-i18n="guar.eyebrow">Security</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-ink-900" data-i18n="guar.title">Buyer Protection</h2>
+      </div>
+      <div id="guaranteeGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Guarantee cards rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FAQ ═══════════ -->
+  <section id="faq" class="py-20 px-4 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-gold-500 font-semibold text-sm tracking-widest uppercase mb-3">FAQ</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-ink-900" data-i18n="faq.title">Common Questions</h2>
+      </div>
+      <div id="faqList" class="space-y-4">
+        <!-- FAQ items rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section id="contact" class="py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-gold-500 font-semibold text-sm tracking-widest uppercase mb-3" data-i18n="contact.eyebrow">Get in Touch</p>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-ink-900 mb-6" data-i18n="contact.title">Ready to Buy?</h2>
+      <p class="text-ink-500 mb-10 max-w-lg mx-auto" data-i18n="contact.desc">Visit our official itemku store or reach out directly.</p>
+      <div id="contactLinks" class="flex flex-wrap justify-center gap-4">
+        <!-- Contact buttons rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="border-t border-ink-200 py-10 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ink-500">
+      <div class="flex items-center gap-3">
+        <img src="assets/img/logo.webp" alt="FFdaffastore" class="w-6 h-6 rounded-full border border-ink-200 object-cover flex-shrink-0">
+        <p>&copy; <span id="footerYear"></span> FFdaffastore. <span data-i18n="footer.disc">Not affiliated with HoYoverse / miHoYo.</span></p>
+      </div>
+      <div class="flex gap-6">
+        <a href="terms.html" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer" data-i18n="footer.terms">Terms</a>
+        <a href="privacy.html" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer" data-i18n="footer.privacy">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
+
+
+

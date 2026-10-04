@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Akun HSR — FFdaffastore</title>
+  <meta name="description" content="Jasa titip cari & request akun Honkai: Star Rail sesuai kriteria, budget, dan karakter incaran kamu. Pencarian maksimal 3x24 jam atau lebih cepat.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FFdaffastore">
+  <meta property="og:title" content="Request Akun Honkai: Star Rail — FFdaffastore">
+  <meta property="og:description" content="Pencarian akun HSR sesuai budget dan karakter incaran. Maks 3x24 jam atau lebih cepat. Garansi 3 bulan.">
+  <meta property="og:image" content="assets/img/logo.webp">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { 50:'#FFFBEB', 100:'#FEF3C7', 200:'#FDE68A', 300:'#FCD34D', 400:'#FBBF24', 500:'#CA8A04', 600:'#A16207', 700:'#854D0E', 800:'#713F12', 900:'#422006' },
+            ink: { 50:'#FAFAF9', 100:'#F5F5F4', 200:'#E7E5E4', 300:'#D6D3D1', 400:'#A8A29E', 500:'#78716C', 600:'#57534E', 700:'#44403C', 800:'#292524', 900:'#1C1917' }
+          },
+          fontFamily: {
+            heading: ['Cormorant', 'serif'],
+            body: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="bg-ink-50 text-ink-900 font-body antialiased">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav id="navbar" class="fixed top-4 left-4 right-4 z-50 bg-white/90 backdrop-blur border border-ink-200 rounded-2xl shadow-sm transition-shadow duration-200">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
+      <a href="index.html" class="flex items-center gap-2.5 cursor-pointer">
+        <img src="assets/img/logo.webp" alt="FFdaffastore logo" class="w-9 h-9 rounded-full border-2 border-gold-300 object-cover flex-shrink-0">
+        <span class="font-heading text-2xl font-bold text-ink-900 tracking-tight">FFdaffastore</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-600">
+        <a href="index.html#catalog" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer">Katalog</a>
+        <a href="request.html" class="text-gold-600 font-semibold flex items-center gap-1.5 cursor-pointer">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>
+          <span>Request Akun</span>
+        </a>
+        <a href="index.html#testimonials" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer">Bukti Transaksi</a>
+        <a href="index.html#guarantee" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer">Garansi</a>
+        <a href="index.html#faq" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer">FAQ</a>
+        <a href="index.html#contact" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer">Kontak</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/6285384858898" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 bg-[#25D366] text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-[#1da851] transition-colors duration-200 cursor-pointer">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>Chat WhatsApp</span>
+        </a>
+        <button id="menuBtn" class="md:hidden p-2 text-ink-700 hover:text-gold-500 transition-colors duration-200 cursor-pointer" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-ink-200 px-6 pb-4 pt-2 space-y-3 text-sm font-medium text-ink-600">
+      <a href="index.html#catalog" class="block hover:text-gold-500 cursor-pointer">Katalog</a>
+      <a href="request.html" class="block text-gold-600 font-semibold cursor-pointer">Request Akun</a>
+      <a href="index.html#testimonials" class="block hover:text-gold-500 cursor-pointer">Bukti Transaksi</a>
+      <a href="index.html#guarantee" class="block hover:text-gold-500 cursor-pointer">Garansi</a>
+      <a href="index.html#faq" class="block hover:text-gold-500 cursor-pointer">FAQ</a>
+      <a href="index.html#contact" class="block hover:text-gold-500 cursor-pointer">Kontak</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header class="pt-32 pb-12 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-gold-500 font-semibold text-xs md:text-sm tracking-widest uppercase mb-3">Jasa Titip Cari / Pre-Order Akun HSR</p>
+      <h1 class="font-heading text-4xl md:text-6xl font-bold text-ink-900 leading-tight mb-4">
+        Request Akun Impian Kamu
+      </h1>
+      <p class="text-ink-500 text-base md:text-lg max-w-2xl mx-auto mb-8 font-light">
+        Belum menemukan spek yang pas di katalog? Beritahu kami kriteria akun yang kamu incar. Kami carikan unit terbaik yang sudah lolos uji aman dan bergaransi penuh.
+      </p>
+
+      <!-- SLA Highlight Badge -->
+      <div class="inline-flex flex-col sm:flex-row items-center gap-3 bg-amber-50/80 border border-amber-200 text-amber-900 px-5 py-3 rounded-2xl shadow-sm">
+        <div class="flex items-center gap-2 font-semibold text-xs md:text-sm">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>⏱️ Waktu Pencarian: <strong>Maksimal 3x24 Jam atau lebih cepat</strong></span>
+        </div>
+        <span class="hidden sm:inline text-amber-300">•</span>
+        <span class="text-xs text-amber-800">🛡️ Tetap dapat Garansi Penuh 3 Bulan</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ FORM & PREVIEW SECTION ═══════════ -->
+  <main class="pb-24 px-4">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+      <!-- LEFT: The Interactive Form (7 cols) -->
+      <div class="lg:col-span-7 bg-white border border-ink-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
+
+        <!-- Step 1: Server -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-ink-500 mb-2.5">
+            1. Server Tujuan <span class="text-rose-500">*</span>
+          </label>
+          <div id="serverPills" class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <button type="button" data-server="Asia" class="server-pill active text-xs font-semibold py-2.5 px-3 rounded-xl border border-ink-900 bg-ink-900 text-white transition-all cursor-pointer">Asia (Utama)</button>
+            <button type="button" data-server="America" class="server-pill text-xs font-semibold py-2.5 px-3 rounded-xl border border-ink-200 bg-white text-ink-700 hover:border-gold-400 transition-all cursor-pointer">America</button>
+            <button type="button" data-server="Europe" class="server-pill text-xs font-semibold py-2.5 px-3 rounded-xl border border-ink-200 bg-white text-ink-700 hover:border-gold-400 transition-all cursor-pointer">Europe</button>
+            <button type="button" data-server="TW/HK/MO" class="server-pill text-xs font-semibold py-2.5 px-3 rounded-xl border border-ink-200 bg-white text-ink-700 hover:border-gold-400 transition-all cursor-pointer">TW/HK/MO</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Budget -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-ink-500 mb-2.5">
+            2. Rentang Budget <span class="text-rose-500">*</span>
+          </label>
+          <div id="budgetPills" class="grid grid-cols-2 gap-2 mb-2.5">
+            <button type="button" data-budget="Rp 300.000 - Rp 500.000" class="budget-pill text-xs font-semibold py-2.5 px-3 rounded-xl border border-ink-200 bg-white text-ink-700 hover:border-gold-400 transition-all cursor-pointer">Rp 300rb - 500rb</button>
+            <button type="button" data-budget="Rp 500.000 - Rp 1.000.000" class="budget-pill active text-xs font-semibold py-2.5 px-3 rounded-xl border border-ink-900 bg-ink-900 text-white transition-all cursor-pointer">Rp 500rb - 1jt (Rekomendasi)</button>
+            <button type="button" data-budget="Rp 1.000.000 - Rp 2.500.000" class="budget-pill text-xs font-semibold py-2.5 px-3 rounded-xl border border-ink-200 bg-white text-ink-700 hover:border-gold-400 transition-all cursor-pointer">Rp 1jt - 2.5jt (Endgame)</button>
+            <button type="button" data-budget="> Rp 2.500.000 (Sultan/Kolektor)" class="budget-pill text-xs font-semibold py-2.5 px-3 rounded-xl border border-ink-200 bg-white text-ink-700 hover:border-gold-400 transition-all cursor-pointer">> Rp 2.5jt (Sultan)</button>
+          </div>
+          <input type="text" id="customBudget" placeholder="Atau ketik angka budget spesifik (misal: Rp 750.000)" class="w-full text-xs px-4 py-2.5 rounded-xl border border-ink-200 bg-ink-50/50 text-ink-900 focus:bg-white focus:border-gold-500 focus:outline-none transition-colors">
+        </div>
+
+        <!-- Step 3: Karakter Incaran -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-ink-500 mb-2">
+            3. Karakter & Signature Incaran <span class="text-rose-500">*</span>
+          </label>
+          <p class="text-[11px] text-ink-400 mb-2">Tulis nama karakter, eidolon, atau light cone signature yang wajib ada. Bebas format.</p>
+          <textarea id="charsInput" rows="3" placeholder="Contoh: Acheron E2, Firefly + Signature, Robin E1, Ruan Mei, Huohuo..." class="w-full text-xs p-3 rounded-xl border border-ink-200 bg-ink-50/50 text-ink-900 focus:bg-white focus:border-gold-500 focus:outline-none transition-colors"></textarea>
+        </div>
+
+        <!-- Step 4: Tim / Meta yang Diincar -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-ink-500 mb-2">
+            4. Tim / Meta yang Diincar (Opsional)
+          </label>
+          <p class="text-[11px] text-ink-400 mb-2">Tulis team atau archetype yang kamu targetkan. Bebas format.</p>
+          <textarea id="metaInput" rows="2" placeholder="Contoh: Superbreak team, FUA Feixiao, DoT Kafka, Acheron Hypercarry, bebas asal meta..." class="w-full text-xs p-3 rounded-xl border border-ink-200 bg-ink-50/50 text-ink-900 focus:bg-white focus:border-gold-500 focus:outline-none transition-colors"></textarea>
+        </div>
+
+        <!-- Step 5: Catatan Tambahan -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-ink-500 mb-2">
+            5. Catatan Tambahan (Opsional)
+          </label>
+          <textarea id="notesInput" rows="2" placeholder="Contoh: MC Cewek, sisa jades ada 50+ ticket, story masih awal / sudah tamat, UID sepuh kepala 80..." class="w-full text-xs p-3 rounded-xl border border-ink-200 bg-ink-50/50 text-ink-900 focus:bg-white focus:border-gold-500 focus:outline-none transition-colors"></textarea>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Live WhatsApp Preview & Action (5 cols) -->
+      <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-24">
+
+        <div class="bg-white border border-ink-200 rounded-3xl p-6 shadow-sm">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-ink-100">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
+              <p class="font-heading text-lg font-bold text-ink-900">Format WhatsApp Siap Kirim</p>
+            </div>
+            <button id="copyBtn" class="text-[11px] font-semibold text-gold-600 hover:text-gold-700 flex items-center gap-1 cursor-pointer">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span id="copyBtnText">Salin Teks</span>
+            </button>
+          </div>
+
+          <!-- WhatsApp Chat Preview Bubble -->
+          <div class="bg-[#ECE5DD] p-4 rounded-2xl border border-ink-200/80 mb-5 relative">
+            <div class="bg-white text-ink-900 text-xs p-3.5 rounded-2xl rounded-tr-sm shadow-sm space-y-2 font-mono whitespace-pre-wrap leading-relaxed" id="previewText">
+              <!-- Dynamically populated by JS -->
+            </div>
+            <span class="block text-right text-[10px] text-ink-400 mt-1.5 font-sans">Format pesan otomatis tersusun</span>
+          </div>
+
+          <!-- Send to WA CTA Button -->
+          <a id="waSendBtn" href="#" target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-2.5 bg-[#25D366] text-white font-semibold text-sm py-3.5 px-6 rounded-2xl hover:bg-[#1da851] transition-all duration-200 cursor-pointer shadow-sm hover:shadow">
+            <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>Kirim Request ke WhatsApp</span>
+          </a>
+
+          <p class="text-[11px] text-ink-400 text-center mt-3 leading-relaxed">
+            WhatsApp resmi: <strong class="text-ink-700">0853-8485-8898</strong><br>
+            Tidak ada pungutan DP di awal sebelum akun ditemukan.
+          </p>
+        </div>
+
+        <!-- 3 Steps info card -->
+        <div class="bg-white border border-ink-200 rounded-3xl p-6 shadow-sm">
+          <p class="font-heading text-lg font-bold text-ink-900 mb-4">Alur Kerja Jasa Request:</p>
+          <ol class="space-y-3.5 text-xs text-ink-600">
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-gold-100 text-gold-800 font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+              <div>
+                <strong class="text-ink-900">Kirim Spesifikasi</strong>
+                <p class="text-ink-400 mt-0.5">Isi form di samping lalu kirim pesan langsung ke WhatsApp kami.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-gold-100 text-gold-800 font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+              <div>
+                <strong class="text-ink-900">Pencarian Unit (≤ 3x24 Jam)</strong>
+                <p class="text-ink-400 mt-0.5">Kami kurasi akun-akun pilihan yang 100% aman dan bebas riwayat cheat.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-gold-100 text-gold-800 font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+              <div>
+                <strong class="text-ink-900">Review & Transaksi Aman</strong>
+                <p class="text-ink-400 mt-0.5">Cocok langsung deal via transfer atau rekber Itemku. Dilindungi garansi 3 bulan.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="border-t border-ink-200 py-10 px-4 bg-white">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ink-500">
+      <div class="flex items-center gap-3">
+        <img src="assets/img/logo.webp" alt="FFdaffastore" class="w-6 h-6 rounded-full border border-ink-200 object-cover flex-shrink-0">
+        <p>&copy; <span id="footerYear"></span> FFdaffastore. <span>Not affiliated with HoYoverse / miHoYo.</span></p>
+      </div>
+      <div class="flex gap-6">
+        <a href="index.html" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer">Beranda</a>
+        <a href="terms.html" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer">Terms</a>
+        <a href="privacy.html" class="hover:text-gold-500 transition-colors duration-200 cursor-pointer">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // State
+    const state = {
+      server: "Asia",
+      budget: "Rp 500.000 - Rp 1.000.000",
+      customBudget: "",
+      notes: "",
+      waNumber: "6285384858898"
+    };
+
+    // DOM Elements
+    const previewEl = document.getElementById("previewText");
+    const waSendBtn = document.getElementById("waSendBtn");
+    const copyBtn = document.getElementById("copyBtn");
+    const copyBtnText = document.getElementById("copyBtnText");
+
+    function buildMessage() {
+      const budgetFinal = state.customBudget.trim() ? state.customBudget.trim() : state.budget;
+      const charsFinal = (document.getElementById("charsInput").value.trim()) || "Bebas / Rekomendasi Seller";
+      const metaFinal = (document.getElementById("metaInput").value.trim()) || "-";
+      const notesFinal = state.notes.trim() ? state.notes.trim() : "-";
+
+      return `Halo FFdaffastore, saya mau request cari akun Honkai: Star Rail:
+
+• Server: ${state.server}
+• Budget: ${budgetFinal}
+• Karakter Incaran: ${charsFinal}
+• Tim / Meta: ${metaFinal}
+• Catatan Khusus: ${notesFinal}
+
+Apakah ada unit yang cocok atau bisa dicarikan dalam 3x24 jam? Terima kasih!`;
+    }
+
+    function updatePreview() {
+      const msg = buildMessage();
+      previewEl.textContent = msg;
+      waSendBtn.href = `https://wa.me/${state.waNumber}?text=${encodeURIComponent(msg)}`;
+    }
+
+    // 1. Server pills
+    document.querySelectorAll(".server-pill").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".server-pill").forEach(b => {
+          b.className = "server-pill text-xs font-semibold py-2.5 px-3 rounded-xl border border-ink-200 bg-white text-ink-700 hover:border-gold-400 transition-all cursor-pointer";
+        });
+        btn.className = "server-pill active text-xs font-semibold py-2.5 px-3 rounded-xl border border-ink-900 bg-ink-900 text-white transition-all cursor-pointer";
+        state.server = btn.getAttribute("data-server");
+        updatePreview();
+      });
+    });
+
+    // 2. Budget pills
+    document.querySelectorAll(".budget-pill").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".budget-pill").forEach(b => {
+          b.className = "budget-pill text-xs font-semibold py-2.5 px-3 rounded-xl border border-ink-200 bg-white text-ink-700 hover:border-gold-400 transition-all cursor-pointer";
+        });
+        btn.className = "budget-pill active text-xs font-semibold py-2.5 px-3 rounded-xl border border-ink-900 bg-ink-900 text-white transition-all cursor-pointer";
+        state.budget = btn.getAttribute("data-budget");
+        document.getElementById("customBudget").value = "";
+        state.customBudget = "";
+        updatePreview();
+      });
+    });
+
+    document.getElementById("customBudget").addEventListener("input", (e) => {
+      state.customBudget = e.target.value;
+      if (e.target.value.trim()) {
+        document.querySelectorAll(".budget-pill").forEach(b => {
+          b.className = "budget-pill text-xs font-semibold py-2.5 px-3 rounded-xl border border-ink-200 bg-white text-ink-700 hover:border-gold-400 transition-all cursor-pointer";
+        });
+      }
+      updatePreview();
+    });
+
+    // 3. Chars & meta free-text inputs
+    document.getElementById("charsInput").addEventListener("input", updatePreview);
+    document.getElementById("metaInput").addEventListener("input", updatePreview);
+
+    // 4. Notes input
+    document.getElementById("notesInput").addEventListener("input", (e) => {
+      state.notes = e.target.value;
+      updatePreview();
+    });
+
+    // Copy format button
+    copyBtn.addEventListener("click", async () => {
+      const msg = buildMessage();
+      try {
+        await navigator.clipboard.writeText(msg);
+        copyBtnText.textContent = "Tersalin! ✓";
+        setTimeout(() => { copyBtnText.textContent = "Salin Teks"; }, 2000);
+      } catch (err) {
+        // Fallback
+        const ta = document.createElement("textarea");
+        ta.value = msg;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        copyBtnText.textContent = "Tersalin! ✓";
+        setTimeout(() => { copyBtnText.textContent = "Salin Teks"; }, 2000);
+      }
+    });
+
+    // Mobile nav menu
+    document.getElementById("menuBtn").addEventListener("click", () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    });
+
+    // Year
+    document.getElementById("footerYear").textContent = new Date().getFullYear();
+
+    // Initial render
+    updatePreview();
+  </script>
+</body>
+</html>
