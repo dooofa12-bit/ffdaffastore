@@ -30,7 +30,7 @@ const i18n = {
     "catalog.filterReserved": "Reserved (1)",
     "catalog.available": "Available",
     "catalog.reserved": "Reserved",
-    "catalog.clickDetail": "Click for full specs",
+    "catalog.clickDetail": "Details",
     "modal.tl": "Trailblaze Level",
     "modal.server": "Server",
     "modal.limited": "Limited Chars",
@@ -76,7 +76,7 @@ const i18n = {
     "catalog.filterReserved": "Tereservasi (1)",
     "catalog.available": "Tersedia",
     "catalog.reserved": "Tereservasi",
-    "catalog.clickDetail": "Klik untuk spek lengkap",
+    "catalog.clickDetail": "Detail",
     "modal.tl": "Level Trailblaze",
     "modal.server": "Server",
     "modal.limited": "Karakter Limited",
@@ -253,9 +253,9 @@ function renderCatalog() {
             <p class="text-xs text-ink-500 mt-1 line-clamp-1">${acc.highlights.slice(0, 2).join(" • ")}</p>
           </div>
         </div>
-        <div class="p-5 pt-3 border-t border-ink-100 flex items-center justify-between">
-          <p class="font-heading text-2xl font-bold text-ink-900">${acc.price}</p>
-          <span class="text-xs font-semibold text-gold-600 group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1">
+        <div class="p-5 pt-3 border-t border-ink-100 flex items-center justify-between gap-2">
+          <p class="font-heading text-xl sm:text-2xl font-bold text-ink-900">${acc.price}</p>
+          <span class="text-xs font-semibold text-gold-700 bg-gold-50 border border-gold-200/70 px-2.5 py-1 rounded-lg group-hover:bg-gold-500 group-hover:text-white group-hover:border-gold-500 transition-all inline-flex items-center gap-1 shrink-0">
             ${t("catalog.clickDetail")} →
           </span>
         </div>
