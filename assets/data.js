@@ -18,7 +18,7 @@ window.SITE_CONFIG = {
   // Official store & contact links
   links: {
     itemkuStore: "https://www.itemku.com/id/t/ffdaffastore", // toko itemku resmi
-    whatsapp: "085384858898",
+    whatsapp: "+6285384858898",
     discord: "",
     instagram: "",
     email: ""
