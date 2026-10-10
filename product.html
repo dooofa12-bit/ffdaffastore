@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSR-01 — FFdaffastore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold-50:#FFFBEB; --gold-100:#FEF3C7; --gold-200:#FDE68A; --gold-300:#FCD34D;
+  --gold-400:#FBBF24; --gold-500:#CA8A04; --gold-600:#A16207; --gold-700:#854D0E;
+  --gold-800:#713F12; --gold-900:#422006;
+  --ink-50:#FAFAF9; --ink-100:#F5F5F4; --ink-200:#E7E5E4; --ink-300:#D6D3D1;
+  --ink-400:#A8A29E; --ink-500:#78716C; --ink-600:#57534E; --ink-700:#44403C;
+  --ink-800:#292524; --ink-900:#1C1917;
+  --wa:#25D366; --wa-d:#1da851;
+  --em:#ECFDF5; --em6:#059669; --em7:#047857;
+  --sh-sm:0 1px 2px rgba(28,25,23,.05);
+  --sh-md:0 4px 6px -1px rgba(28,25,23,.07),0 2px 4px -2px rgba(28,25,23,.05);
+  --sh-lg:0 10px 25px -5px rgba(28,25,23,.08),0 8px 10px -6px rgba(28,25,23,.04);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink-50); color:var(--ink-900);
+  font-family:'Montserrat',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-weight:400; line-height:1.55; -webkit-font-smoothing:antialiased;
+  padding-bottom:64px;
+}
+.serif{font-family:'Cormorant',Georgia,'Times New Roman',serif}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ── NAVBAR ── */
+.nav{
+  position:sticky; top:12px; z-index:50; margin:12px auto 0;
+  max-width:1120px; width:calc(100% - 24px);
+  background:rgba(255,255,255,.9); backdrop-filter:blur(10px);
+  border:1px solid var(--ink-200); border-radius:16px; box-shadow:var(--sh-sm);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .lg{
+  width:34px;height:34px;border-radius:50%;border:2px solid var(--gold-300);
+  background:linear-gradient(150deg,var(--gold-400),var(--gold-600));
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:13px;letter-spacing:.02em;flex:none;
+}
+.brand .bn{font-size:21px;font-weight:700;line-height:1.1}
+.brand .bs{font-size:10.5px;color:var(--ink-400);letter-spacing:.04em;margin-top:-1px}
+.nav-links{display:flex;gap:22px;font-size:13.5px;font-weight:500;color:var(--ink-600)}
+.nav-links a:hover{color:var(--gold-500)}
+.nav-cta{
+  display:flex;align-items:center;gap:7px;background:var(--gold-500);color:#fff;
+  font-size:13px;font-weight:600;padding:9px 16px;border-radius:12px;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--gold-600)}
+@media(max-width:760px){
+  .nav-links{display:none}
+  .nav-in{padding:9px 12px}
+  .brand .bn{font-size:17px}
+  .brand .bs{display:none}
+  .brand .lg{width:30px;height:30px;font-size:11px}
+  .nav-cta{padding:8px 12px;font-size:12px}
+  .nav-cta span{display:none}
+}
+
+/* ── LAYOUT ── */
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.crumbs{font-size:12px;color:var(--ink-400);padding:18px 0 14px;letter-spacing:.01em}
+.crumbs a:hover{color:var(--gold-600)}
+.crumbs .sep{margin:0 7px;color:var(--ink-300)}
+.crumbs .cur{color:var(--ink-700);font-weight:600}
+
+.layout{display:grid;grid-template-columns:1fr;gap:26px;align-items:start}
+@media(min-width:940px){ .layout{grid-template-columns:minmax(0,1fr) 372px} }
+
+.card{background:#fff;border:1px solid var(--ink-200);border-radius:18px}
+.card-pad{padding:22px}
+
+/* ── GALLERY ── */
+.hero-img{
+  position:relative;border-radius:18px;overflow:hidden;
+  aspect-ratio:16/9;background:var(--ink-100);
+  border:1px solid var(--ink-200);box-shadow:var(--sh-md);
+}
+.hero-img .slot{
+  position:absolute;inset:10px;border:1.5px dashed var(--ink-300);border-radius:12px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;
+  color:var(--ink-400);text-align:center;padding:16px;
+}
+.hero-img .slot .ic{width:34px;height:34px;opacity:.55}
+.hero-img .slot .t{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.hero-img .slot .s{font-size:11px;color:var(--ink-300);letter-spacing:.02em}
+.hero-img .ribbon{
+  position:absolute;left:14px;top:14px;background:rgba(28,25,23,.82);color:#FDE68A;
+  font-size:11px;font-weight:700;letter-spacing:.06em;padding:5px 11px;border-radius:8px;
+  backdrop-filter:blur(4px);z-index:2;
+}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:10px}
+.thumb{
+  aspect-ratio:16/10;border-radius:10px;overflow:hidden;cursor:pointer;
+  border:1.5px dashed var(--ink-300);background:var(--ink-50);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  color:var(--ink-400);transition:border-color .15s ease;
+}
+.thumb:hover{border-color:var(--gold-300)}
+.thumb.on{border-style:solid;border-color:var(--gold-500);background:var(--gold-50)}
+.thumb svg{width:18px;height:18px;opacity:.6}
+.thumb .tt{font-size:8.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-align:center;line-height:1.25;padding:0 3px}
+@media(max-width:520px){ .thumb .tt{display:none} }
+
+/* ── TITLE ── */
+.title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin:22px 0 4px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-500)}
+h1{font-size:38px;font-weight:700;line-height:1.08;margin-top:6px}
+.badge{
+  flex:none;font-size:11.5px;font-weight:700;padding:6px 13px;border-radius:999px;
+  background:var(--em);color:var(--em7);border:1px solid #A7F3D0;white-space:nowrap;margin-top:22px;
+}
+.sub{color:var(--ink-500);font-size:14px;margin-top:6px}
+
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:16px 0 14px}
+@media(min-width:640px){ .stats{grid-template-columns:repeat(4,1fr)} }
+.stat{background:var(--ink-50);border:1px solid var(--ink-100);border-radius:12px;padding:11px 13px}
+.stat .l{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-400)}
+.stat .v{font-size:17px;font-weight:700;color:var(--ink-900);line-height:1.15;margin-top:2px}
+.stat .v.gold{color:var(--gold-600)}
+
+/* ── HIGHLIGHT PILLS + DESC (mirrors catalog modal) ── */
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}
+.pill{font-size:11.5px;font-weight:500;background:var(--gold-50);color:var(--gold-800);border:1px solid var(--gold-200);padding:4px 10px;border-radius:8px}
+.desc{font-size:13px;color:var(--ink-500);line-height:1.6;margin:0 0 26px}
+
+/* ── SECTION HEAD ── */
+.sec{margin-bottom:22px}
+.sec-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.sec-h h2{font-size:23px;font-weight:700}
+.sec-h .n{
+  width:26px;height:26px;border-radius:8px;background:var(--gold-100);color:var(--gold-700);
+  display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex:none;
+}
+
+/* ── SPEC ROWS ── */
+.spec-row{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:12px 0;border-bottom:1px solid var(--ink-100);font-size:14px;
+}
+.spec-row:last-child{border-bottom:0}
+.spec-row .k{color:var(--ink-500)}
+.spec-row .v{font-weight:600;text-align:right}
+.tag{
+  display:inline-flex;align-items:center;gap:6px;background:var(--gold-50);
+  border:1px solid var(--gold-200);color:var(--gold-700);
+  font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:999px;
+}
+.tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-500)}
+
+/* ── CHARACTER CARDS (in-game yellow) ── */
+.grp-label{
+  font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-400);margin:0 0 10px;
+}
+.grp-label.feat{color:var(--gold-600)}
+.grid-feat{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:22px}
+@media(min-width:560px){ .grid-feat{grid-template-columns:repeat(4,1fr)} }
+.grid-other{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(min-width:520px){ .grid-other{grid-template-columns:repeat(5,1fr)} }
+@media(min-width:860px){ .grid-other{grid-template-columns:repeat(7,1fr)} }
+
+.cc{
+  position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;
+  background:
+    radial-gradient(120% 78% at 50% 2%, rgba(255,255,255,.62), rgba(255,255,255,0) 62%),
+    linear-gradient(168deg,#FFF8E1 0%,#FCE49B 33%,#F2C14E 65%,#D8961C 100%);
+  border:1px solid rgba(161,98,7,.30);
+  box-shadow:0 1px 2px rgba(133,77,14,.10),0 6px 14px -9px rgba(133,77,14,.30);
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.cc:hover{transform:translateY(-3px);box-shadow:0 12px 24px -10px rgba(133,77,14,.45)}
+.cc .el{
+  position:absolute;top:7px;left:7px;width:25px;height:25px;z-index:3;border-radius:50%;
+  background:rgba(255,255,255,.75);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 1px 3px rgba(66,32,6,.25);
+}
+.cc .el img{width:16px;height:16px}
+.cc .tg{
+  position:absolute;top:8px;right:7px;z-index:3;font-size:8.5px;font-weight:700;
+  letter-spacing:.03em;padding:3px 7px;border-radius:999px;
+  background:rgba(66,32,6,.85);color:#FDE68A;white-space:nowrap;
+}
+.cc .por{
+  position:absolute;left:50%;bottom:0;transform:translateX(-50%);z-index:1;
+  width:100%;height:100%;object-fit:contain;object-position:bottom center;
+  filter:drop-shadow(0 4px 7px rgba(66,32,6,.22));
+}
+.cc .nm{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;padding:16px 5px 6px;
+  text-align:center;font-size:10.5px;font-weight:600;color:#3B2A08;line-height:1.2;
+  background:linear-gradient(0deg,rgba(255,252,240,.95) 40%,rgba(255,252,240,0));
+}
+.cc.feat .nm{font-size:12px;padding:18px 6px 7px}
+.cc.feat .el{width:29px;height:29px;top:9px;left:9px}
+.cc.feat .el img{width:19px;height:19px}
+.cc.feat .tg{font-size:9.5px;top:10px;right:9px}
+
+/* ── CONES ── */
+.cone-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:620px){ .cone-grid{grid-template-columns:repeat(4,1fr)} }
+.cone{
+  position:relative;aspect-ratio:5/6;border-radius:14px;overflow:hidden;
+  background:
+    radial-gradient(115% 72% at 50% 4%, rgba(255,255,255,.55), rgba(255,255,255,0) 60%),
+    linear-gradient(170deg,#FFF8E1 0%,#FCE49B 36%,#EFBE47 70%,#CE8C18 100%);
+  border:1px solid rgba(161,98,7,.30);
+  box-shadow:0 1px 2px rgba(133,77,14,.10),0 6px 14px -9px rgba(133,77,14,.30);
+}
+.cone .cp{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:contain;
+  object-position:center 30%;padding:8px 8px 40px;
+  filter:drop-shadow(0 5px 9px rgba(66,32,6,.25));
+}
+.cone .cb{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;padding:18px 8px 8px;text-align:center;
+  background:linear-gradient(0deg,rgba(255,252,240,.97) 46%,rgba(255,252,240,0));
+}
+.cone .cn{font-size:11px;font-weight:700;color:#3B2A08;line-height:1.2}
+.cone .co{font-size:9.5px;color:var(--gold-700);margin-top:2px;font-weight:600}
+.cone .c5{
+  position:absolute;top:8px;left:8px;z-index:3;font-size:9px;font-weight:700;color:#3B2A08;
+  background:rgba(255,255,255,.72);border-radius:6px;padding:2px 7px;
+}
+
+/* ── ALERT ── */
+.alert{
+  display:flex;gap:12px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:14px;
+  padding:15px 17px;margin-bottom:22px;
+}
+.alert .ai{flex:none;width:20px;height:20px;color:#2563EB}
+.alert .at{font-size:13px;color:#1E40AF;line-height:1.55}
+.alert .at b{font-weight:700}
+
+/* ── WHY ── */
+.why{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:560px){ .why{grid-template-columns:1fr 1fr} }
+.why-i{display:flex;gap:11px;align-items:flex-start;padding:13px 14px;border:1px solid var(--ink-200);border-radius:12px}
+.why-i .ck{
+  flex:none;width:20px;height:20px;border-radius:50%;background:var(--em);color:var(--em6);
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px;
+}
+.why-i .wt{font-size:13px;font-weight:600}
+.why-i .wd{font-size:12px;color:var(--ink-500);margin-top:1px;line-height:1.5}
+
+/* ── ORDER CARD ── */
+@media(min-width:940px){ .side{position:sticky;top:86px} }
+.order{background:#fff;border:1px solid var(--ink-200);border-radius:18px;overflow:hidden;box-shadow:var(--sh-md)}
+.order-head{background:linear-gradient(135deg,var(--gold-500),var(--gold-700));padding:20px 22px;color:#fff}
+.order-head .ol{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.82}
+.order-head .op{font-size:31px;font-weight:700;line-height:1.1;margin-top:5px}
+.order-head .os{font-size:12px;opacity:.85;margin-top:4px}
+.order-body{padding:18px 22px 20px}
+.ometa{display:flex;justify-content:space-between;font-size:13px;padding:9px 0;border-bottom:1px solid var(--ink-100)}
+.ometa .k{color:var(--ink-500)}
+.ometa .v{font-weight:600}
+.ometa:last-of-type{border-bottom:0}
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:9px;width:100%;
+  font-size:14px;font-weight:600;padding:13px;border-radius:13px;margin-top:11px;
+  transition:background-color .2s ease,transform .1s ease;
+}
+.btn:active{transform:scale(.98)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-d)}
+.btn-ik{background:var(--gold-500);color:#fff}
+.btn-ik:hover{background:var(--gold-600)}
+.guar{
+  margin-top:16px;padding:13px 14px;border-radius:12px;background:var(--ink-50);
+  border:1px solid var(--ink-200);font-size:12px;color:var(--ink-600);line-height:1.6;
+}
+.guar b{color:var(--ink-900)}
+.trust{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.trust span{
+  font-size:10.5px;font-weight:600;color:var(--ink-600);background:var(--ink-100);
+  padding:4px 9px;border-radius:7px;
+}
+.wanote{font-size:11px;color:var(--ink-400);text-align:center;margin-top:12px;line-height:1.5}
+
+.pvbadge{
+  position:fixed;left:50%;transform:translateX(-50%);bottom:14px;z-index:60;
+  background:rgba(28,25,23,.9);color:#FDE68A;font-size:11px;font-weight:600;
+  letter-spacing:.08em;padding:7px 16px;border-radius:999px;backdrop-filter:blur(6px);
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <div class="brand">
+      <div class="lg">FF</div>
+      <div>
+        <div class="bn serif">FFdaffastore</div>
+        <div class="bs">Honkai: Star Rail Verified Store</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html#catalog">Katalog</a>
+      <a href="index.html#testimonials">Bukti</a>
+      <a href="index.html#guarantee">Garansi</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <a class="nav-cta" href="index.html">
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
+      Kunjungi Toko
+    </a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="crumbs">
+    <a href="index.html">Beranda</a><span class="sep">/</span><a href="index.html#catalog">Katalog</a><span class="sep">/</span><span class="cur" id="dCrumb"></span>
+  </div>
+
+  <div class="layout">
+    <!-- ══ MAIN ══ -->
+    <main>
+      <div class="hero-img">
+        <span class="ribbon" id="dRibbon"></span>
+        <div class="slot">
+          <svg class="ic" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg>
+          <div class="t">Foto Utama Akun</div>
+          <div class="s">Screenshot profil / roster akun</div>
+        </div>
+      </div>
+      <div class="thumbs"><div class="thumb on"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Roster 1</span></div><div class="thumb"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Roster 2</span></div><div class="thumb"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Lightcone</span></div><div class="thumb"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Inventory</span></div><div class="thumb"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Profile</span></div></div>
+
+      <div class="title-row">
+        <div>
+          <p class="eyebrow" id="dCode"></p>
+          <h1 class="serif" id="dTitle"></h1>
+        </div>
+        <span class="badge" id="dBadge">Tersedia</span>
+      </div>
+
+      <div class="stats" id="dStats"></div>
+      <div class="pills" id="dPills"></div>
+      <p class="desc" id="dDesc"></p>
+
+      <!-- Spesifikasi -->
+      <section class="card card-pad sec">
+        <div class="sec-h"><span class="n">1</span><h2 class="serif">Spesifikasi Akun</h2></div>
+        <div id="dSpecs"></div>
+      </section>
+
+      <!-- Daftar Karakter -->
+      <section class="card card-pad sec">
+        <div class="sec-h"><span class="n">2</span><h2 class="serif">Daftar Karakter</h2></div>
+
+        <p class="grp-label feat">★ Unggulan — Signature / Eidolon</p>
+        <div class="grid-feat" id="dFeat"></div>
+
+        <p class="grp-label">Limited 5★ Lainnya</p>
+        <div class="grid-other" id="dOther"></div>
+      </section>
+
+      <!-- Lightcone -->
+      <section class="card card-pad sec">
+        <div class="sec-h"><span class="n">3</span><h2 class="serif">Signature Lightcone</h2></div>
+        <div class="cone-grid" id="dCones"></div>
+      </section>
+
+      <div class="alert">
+        <svg class="ai" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <div class="at">Semua karakter <b>sudah ter-unlock dan ter-build</b>. Tidak ada karakter yang hilang atau di-refund. Screenshot inventory lengkap bisa diminta sebelum pembelian.</div>
+      </div>
+
+      <section class="card card-pad sec">
+        <div class="sec-h"><span class="n">4</span><h2 class="serif">Kenapa Pilih FFdaffastore</h2></div>
+        <div class="why">
+          <div class="why-i"><span class="ck">✓</span><div><div class="wt">Garansi 3 Bulan</div><div class="wd">Klaim penuh bila akun bermasalah.</div></div></div>
+          <div class="why-i"><span class="ck">✓</span><div><div class="wt">Direct / Escrow</div><div class="wd">Bisa lewat itemku untuk keamanan ekstra.</div></div></div>
+          <div class="why-i"><span class="ck">✓</span><div><div class="wt">Anti-Hackback</div><div class="wd">Riwayat akun bersih dan terverifikasi.</div></div></div>
+          <div class="why-i"><span class="ck">✓</span><div><div class="wt">Pendampingan</div><div class="wd">Dibimbing sampai ganti gmail selesai.</div></div></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══ SIDE ══ -->
+    <aside class="side">
+      <div class="order">
+        <div class="order-head">
+          <div class="ol">Harga</div>
+          <div class="op" id="dPrice"></div>
+          <div class="os">Sudah termasuk pendampingan serah terima</div>
+        </div>
+        <div class="order-body">
+          <div id="dMeta"></div>
+
+          <a class="btn btn-wa" href="#" id="dWA">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat WhatsApp
+          </a>
+          <a class="btn btn-ik" href="#" id="dIK">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
+            Beli via itemku
+          </a>
+
+          <div class="guar"><b>Garansi 3 bulan.</b> Bila akun ter-hackback atau bermasalah, kami ganti penuh atau refund 100%.</div>
+          <div class="trust"><span>500+ Terjual</span><span>4.9 ★</span><span>Escrow</span><span>Sejak 2023</span></div>
+          <p class="wanote">Balasan cepat 08.00–23.00 WIB</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div class="pvbadge">PREVIEW — REVISI 3</div>
+<script src="assets/data.js"></script>
+<script src="assets/roster.js"></script>
+<script src="assets/product.js"></script>
+</body>
+</html>

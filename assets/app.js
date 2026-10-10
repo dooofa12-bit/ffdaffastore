@@ -218,6 +218,7 @@ function openModal(id) {
     .replace("{price}", acc.price);
   waBtn.href = D.links.whatsapp ? `https://wa.me/${D.links.whatsapp.replace(/\D/g,"")}?text=${encodeURIComponent(waMsg)}` : "#contact";
   document.getElementById("modalItemku").href = acc.itemkuUrl || D.links.itemkuStore || "#";
+  document.getElementById("modalDetail").href = `product.html?id=${acc.id}`;
 
   const modal = document.getElementById("catalogModal");
   modal.classList.remove("hidden");
