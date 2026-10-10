@@ -149,9 +149,9 @@
       <button id="modalClose" class="absolute top-5 right-5 text-ink-400 hover:text-ink-900 transition-colors cursor-pointer" aria-label="Close">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
-      <div id="modalImg" class="aspect-16-9 img-slot rounded-2xl mb-6 overflow-hidden">
-        <img id="modalImgTag" src="" alt="" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
-        <span class="placeholder-label text-ink-400 text-xs">Image</span>
+      <div id="modalImg" class="aspect-16-9 img-slot rounded-2xl mb-6 overflow-hidden relative">
+        <img id="modalImgTag" alt="" class="absolute inset-0 w-full h-full object-cover" style="display:none">
+        <span id="modalImgPlaceholder" class="placeholder-label text-ink-400 text-xs">Image</span>
       </div>
       <div class="flex items-start justify-between mb-4">
         <div>

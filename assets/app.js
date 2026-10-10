@@ -34,7 +34,7 @@ const i18n = {
     "modal.tl": "Trailblaze Level",
     "modal.server": "Server",
     "modal.limited": "Limited Chars",
-    "modal.sign": "Signature Cones",
+    "modal.sign": "Signature Lightcone",
     "modal.price": "Price",
     "modal.waPre": "Hi, I'm interested in account ",
     "testi.eyebrow": "Proof",
@@ -80,7 +80,7 @@ const i18n = {
     "modal.tl": "Level Trailblaze",
     "modal.server": "Server",
     "modal.limited": "Karakter Limited",
-    "modal.sign": "Light Cone Signature",
+    "modal.sign": "Lightcone Signature",
     "modal.price": "Harga",
     "modal.waPre": "Halo min, saya tertarik dengan akun ",
     "testi.eyebrow": "Bukti",
@@ -160,7 +160,26 @@ function openModal(id) {
 
   document.getElementById("modalId").textContent = acc.id;
   document.getElementById("modalTitle").textContent = acc.title;
-  document.getElementById("modalImgTag").src = acc.image;
+
+  const imgTag = document.getElementById("modalImgTag");
+  const placeholder = document.getElementById("modalImgPlaceholder");
+  if (acc.image) {
+    imgTag.onload = () => { if (placeholder) placeholder.style.display = "none"; };
+    imgTag.onerror = () => {
+      imgTag.style.display = "none";
+      if (placeholder) placeholder.style.display = "block";
+    };
+    imgTag.src = acc.image;
+    imgTag.alt = acc.title;
+    imgTag.style.display = "block";
+    if (imgTag.complete && imgTag.naturalWidth > 0) {
+      if (placeholder) placeholder.style.display = "none";
+    }
+  } else {
+    imgTag.style.display = "none";
+    if (placeholder) placeholder.style.display = "block";
+  }
+
   const badge = document.getElementById("modalBadge");
   badge.textContent = isAvail ? t("catalog.available") : t("catalog.reserved");
   badge.className = `text-xs font-semibold px-3 py-1 rounded-full ${badgeClass}`;
@@ -180,7 +199,7 @@ function openModal(id) {
     </div>
     <div class="bg-ink-50 p-3 rounded-xl border border-ink-100">
       <p class="text-[10px] text-ink-400 font-semibold uppercase tracking-wider">${t("modal.sign")}</p>
-      <p class="font-heading text-lg font-bold text-ink-900 mt-0.5">${acc.signWeapons} Cones</p>
+      <p class="font-heading text-lg font-bold text-ink-900 mt-0.5">${acc.signWeapons} Lightcone</p>
     </div>
   `;
 
