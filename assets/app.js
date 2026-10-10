@@ -186,21 +186,21 @@ function openModal(id) {
   badge.className = `text-xs font-semibold px-3 py-1 rounded-full ${badgeClass}`;
 
   document.getElementById("modalStats").innerHTML = `
-    <div class="bg-ink-50 p-3 rounded-xl border border-ink-100">
+    <div class="bg-ink-50 p-2.5 sm:p-3 rounded-xl border border-ink-100">
       <p class="text-[10px] text-ink-400 font-semibold uppercase tracking-wider">${t("modal.tl")}</p>
-      <p class="font-heading text-lg font-bold text-ink-900 mt-0.5">TL ${acc.trailblazeLevel} • ${acc.server}</p>
+      <p class="font-heading text-base sm:text-lg font-bold text-ink-900 mt-0.5">TL ${acc.trailblazeLevel} • ${acc.server}</p>
     </div>
-    <div class="bg-ink-50 p-3 rounded-xl border border-ink-100">
+    <div class="bg-ink-50 p-2.5 sm:p-3 rounded-xl border border-ink-100">
       <p class="text-[10px] text-ink-400 font-semibold uppercase tracking-wider">${t("modal.price")}</p>
-      <p class="font-heading text-lg font-bold text-gold-600 mt-0.5">${acc.price}</p>
+      <p class="font-heading text-base sm:text-lg font-bold text-gold-600 mt-0.5">${acc.price}</p>
     </div>
-    <div class="bg-ink-50 p-3 rounded-xl border border-ink-100">
+    <div class="bg-ink-50 p-2.5 sm:p-3 rounded-xl border border-ink-100">
       <p class="text-[10px] text-ink-400 font-semibold uppercase tracking-wider">${t("modal.limited")}</p>
-      <p class="font-heading text-lg font-bold text-ink-900 mt-0.5">${acc.limitedChars} Characters</p>
+      <p class="font-heading text-base sm:text-lg font-bold text-ink-900 mt-0.5">${acc.limitedChars} Characters</p>
     </div>
-    <div class="bg-ink-50 p-3 rounded-xl border border-ink-100">
+    <div class="bg-ink-50 p-2.5 sm:p-3 rounded-xl border border-ink-100">
       <p class="text-[10px] text-ink-400 font-semibold uppercase tracking-wider">${t("modal.sign")}</p>
-      <p class="font-heading text-lg font-bold text-ink-900 mt-0.5">${acc.signWeapons} Lightcone</p>
+      <p class="font-heading text-base sm:text-lg font-bold text-ink-900 mt-0.5">${acc.signWeapons} Lightcone</p>
     </div>
   `;
 
