@@ -25,9 +25,9 @@ const i18n = {
     "catalog.eyebrow": "Catalog",
     "catalog.title": "Current Listings",
     "catalog.desc": "Each account is vetted, clean history, backed by a 3-month warranty with replacement or 100% refund.",
-    "catalog.filterAll": "All (4)",
+    "catalog.filterAll": "All (3)",
     "catalog.filterAvail": "Available (3)",
-    "catalog.filterReserved": "Reserved (1)",
+    "catalog.filterReserved": "Reserved (0)",
     "catalog.available": "Available",
     "catalog.reserved": "Reserved",
     "catalog.clickDetail": "Details",
@@ -71,9 +71,9 @@ const i18n = {
     "catalog.eyebrow": "Katalog",
     "catalog.title": "Listing Saat Ini",
     "catalog.desc": "Setiap akun sudah dicek riwayatnya, dilindungi garansi 3 bulan: opsi ganti unit baru atau 100% full refund.",
-    "catalog.filterAll": "Semua (4)",
+    "catalog.filterAll": "Semua (3)",
     "catalog.filterAvail": "Tersedia (3)",
-    "catalog.filterReserved": "Tereservasi (1)",
+    "catalog.filterReserved": "Tereservasi (0)",
     "catalog.available": "Tersedia",
     "catalog.reserved": "Tereservasi",
     "catalog.clickDetail": "Detail",
@@ -195,7 +195,7 @@ function openModal(id) {
   const waBtn = document.getElementById("modalWA");
   const waPre = encodeURIComponent(t("modal.waPre") + acc.id + " (" + acc.price + ")");
   waBtn.href = D.links.whatsapp ? `https://wa.me/${D.links.whatsapp.replace(/\D/g,"")}?text=${waPre}` : "#contact";
-  document.getElementById("modalItemku").href = D.links.itemkuStore || "#";
+  document.getElementById("modalItemku").href = acc.itemkuUrl || D.links.itemkuStore || "#";
 
   const modal = document.getElementById("catalogModal");
   modal.classList.remove("hidden");
