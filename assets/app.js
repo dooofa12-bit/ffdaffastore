@@ -2,7 +2,7 @@
 /* Reads window.SITE_CONFIG and renders all dynamic sections */
 
 const D = window.SITE_CONFIG;
-let lang = localStorage.getItem("ffdaffa_lang") || "en";
+let lang = localStorage.getItem("ffdaffa_lang") || "id";
 let activeFilter = "all";
 let activeTestiTab = "all";
 let showAllReviews = false;
@@ -36,7 +36,7 @@ const i18n = {
     "modal.limited": "Limited Chars",
     "modal.sign": "Signature Lightcone",
     "modal.price": "Price",
-    "modal.waPre": "Hi, I'm interested in account ",
+    "modal.waMsg": "Hi! I'm looking at account {id} ({price}) — is it still available? 🙏",
     "testi.eyebrow": "Proof",
     "testi.title": "Transaction History",
     "testi.desc": "Confirmed handovers from real buyers across direct orders and escrow platforms.",
@@ -82,7 +82,7 @@ const i18n = {
     "modal.limited": "Karakter Limited",
     "modal.sign": "Lightcone Signature",
     "modal.price": "Harga",
-    "modal.waPre": "Halo min, saya tertarik dengan akun ",
+    "modal.waMsg": "Halo min, aku mau nanya-nanya akun {id} ({price}) ya, masih ready? 🙏",
     "testi.eyebrow": "Bukti",
     "testi.title": "Riwayat Transaksi",
     "testi.desc": "Bukti serah terima sukses dari pembeli langsung maupun platform escrow.",
@@ -128,6 +128,7 @@ document.querySelectorAll("#mobileMenu a").forEach(a => {
 });
 
 // Lang toggle
+document.getElementById("langToggle").textContent = lang === "en" ? "EN / ID" : "ID / EN";
 document.getElementById("langToggle").addEventListener("click", () => {
   lang = lang === "en" ? "id" : "en";
   localStorage.setItem("ffdaffa_lang", lang);
@@ -212,8 +213,10 @@ function openModal(id) {
 
   // Buttons with pre-filled text
   const waBtn = document.getElementById("modalWA");
-  const waPre = encodeURIComponent(t("modal.waPre") + acc.id + " (" + acc.price + ")");
-  waBtn.href = D.links.whatsapp ? `https://wa.me/${D.links.whatsapp.replace(/\D/g,"")}?text=${waPre}` : "#contact";
+  const waMsg = (t("modal.waMsg") || "Halo min, aku mau nanya-nanya akun {id} ({price}) ya, masih ready? 🙏")
+    .replace("{id}", acc.id)
+    .replace("{price}", acc.price);
+  waBtn.href = D.links.whatsapp ? `https://wa.me/${D.links.whatsapp.replace(/\D/g,"")}?text=${encodeURIComponent(waMsg)}` : "#contact";
   document.getElementById("modalItemku").href = acc.itemkuUrl || D.links.itemkuStore || "#";
 
   const modal = document.getElementById("catalogModal");
