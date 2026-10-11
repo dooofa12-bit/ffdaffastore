@@ -40,7 +40,14 @@ window.SITE_CONFIG = {
       enHighlights: ["Sunday + Sign", "Phainon E1 + Sign", "Old UID 8030", "Planarcadia Story"],
       desc: "Akun HSR Asia TL70, 29 Limited, 4 Signature. Sunday Sign, Phainon E1 Sign, UID Old 8030, Story Planarcadia.",
       enDesc: "HSR Asia TL70 account, 29 Limited, 4 Signatures. Sunday Sign, Phainon E1 Sign, Old UID 8030, Planarcadia Story.",
-      itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-akun-hsr-asia-tl70-29-limit-4-sign-sunday-sign-phainon-e1-sign-uid-old-8030-story-planarcadia-termurah-ffdaffastore/4404834?from=product_list_page&fromAds=1&ads_placement=2"
+      itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-akun-hsr-asia-tl70-29-limit-4-sign-sunday-sign-phainon-e1-sign-uid-old-8030-story-planarcadia-termurah-ffdaffastore/4404834?from=product_list_page&fromAds=1&ads_placement=2",
+      shots: [
+        { src: "assets/img/shot/hsr01-hero.webp", label: "Pengalaman Trailblaze" },
+        { src: "assets/img/shot/hsr01-roster1.webp", label: "Banner akun" },
+        { src: "assets/img/shot/hsr01-lightcone.webp", label: "Light Cone" },
+        { src: "assets/img/shot/hsr01-inventory.webp", label: "Inventory" },
+        { src: "assets/img/shot/hsr01-profile.webp", label: "Profile" }
+      ]
     },
     {
       id: "HSR-02",
@@ -56,7 +63,14 @@ window.SITE_CONFIG = {
       enHighlights: ["Evernight E2 + Sign", "Firefly Costume + Sign", "Veteran UID 8010", "Amphoreus Story"],
       desc: "Akun premium sepuh TL70, 39 Limited, 7 Signature. Evernight E2 Sign, Firefly Costume Sign, UID Sepuh 8010, Story Amphoreus.",
       enDesc: "Premium veteran account TL70, 39 Limited, 7 Signatures. Evernight E2 Sign, Firefly Costume Sign, Veteran UID 8010, Amphoreus Story.",
-      itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-akun-hsr-asia-tl70-premium-39-limit-7-sign-evernight-e2-sign-firefly-costume-sign-uid-sepuh-8010-story-amphoreus-termurah-ffdaffastore/4408195?from=shop_page"
+      itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-akun-hsr-asia-tl70-premium-39-limit-7-sign-evernight-e2-sign-firefly-costume-sign-uid-sepuh-8010-story-amphoreus-termurah-ffdaffastore/4408195?from=shop_page",
+      shots: [
+        { src: "assets/img/shot/hsr02-hero.webp", label: "Pengalaman Trailblaze" },
+        { src: "assets/img/shot/hsr02-roster1.webp", label: "Banner akun" },
+        { src: "assets/img/shot/hsr02-lightcone.webp", label: "Light Cone" },
+        { src: "assets/img/shot/hsr02-profile.webp", label: "Profile" },
+        { src: "assets/img/shot/hsr02-power.webp", label: "Trailblaze Power" }
+      ]
     },
     {
       id: "HSR-03",
@@ -72,7 +86,14 @@ window.SITE_CONFIG = {
       enHighlights: ["Archer E1 + Sign", "Castorice + Sign", "28 Limited 5 Signs", "Amphoreus Story"],
       desc: "Akun HSR Asia TL70, 28 Limited, 5 Signature. Archer E1 Sign, Castorice Sign, Story Amphoreus.",
       enDesc: "HSR Asia TL70 account, 28 Limited, 5 Signatures. Archer E1 Sign, Castorice Sign, Amphoreus Story.",
-      itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-akun-hsr-asia-tl70-archer-e1-sign-castorice-sign-28-limit-5-sign-story-amphoreus-termurah-ffdaffastore/4408213?from=shop_page"
+      itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-akun-hsr-asia-tl70-archer-e1-sign-castorice-sign-28-limit-5-sign-story-amphoreus-termurah-ffdaffastore/4408213?from=shop_page",
+      shots: [
+        { src: "assets/img/shot/hsr03-hero.webp", label: "Pengalaman Trailblaze" },
+        { src: "assets/img/shot/hsr03-roster1.webp", label: "Banner akun" },
+        { src: "assets/img/shot/hsr03-lightcone.webp", label: "Light Cone" },
+        { src: "assets/img/shot/hsr03-profile.webp", label: "Profile" },
+        { src: "assets/img/shot/hsr03-power.webp", label: "Trailblaze Power" }
+      ]
     }
   ],
 
@@ -281,8 +302,8 @@ window.SITE_CONFIG = {
     {
       q: "Apakah akun aman dari ban dan hackback?",
       enQ: "Is it safe from ban and hackback?",
-      a: "Iya, 100% aman. Semua akun diperiksa ketat riwayatnya dan dilengkapi GARANSI 3 BULAN PERTAMA sejak akun kamu pegang. Jika ada kendala kehilangan akses atau hackback selama periode 90 hari tersebut, kami ganti unit akun baru yang setara atau dana kamu kami refund penuh 100%.",
-      enA: "Yes, absolutely safe. All accounts undergo thorough screening and come with a 3-MONTH FULL GUARANTEE from day one. If access is lost or hackback occurs within those 90 days, we either provide an equivalent replacement account or issue a 100% full refund."
+      a: "Aman. Semua akun diperiksa ketat riwayatnya dan dilengkapi GARANSI 3 BULAN PERTAMA sejak akun kamu pegang. Jika ada kendala kehilangan akses atau hackback selama periode 90 hari tersebut, kami ganti unit akun baru yang setara atau dana kamu kami refund penuh 100%.",
+      enA: "Safe. All accounts undergo thorough screening and come with a 3-MONTH FULL GUARANTEE from day one. If access is lost or hackback occurs within those 90 days, we either provide an equivalent replacement account or issue a 100% full refund."
     },
     {
       q: "Bagaimana cara melakukan pemesanan?",

@@ -99,7 +99,7 @@ img{display:block;max-width:100%}
   font-size:11px;font-weight:700;letter-spacing:.06em;padding:5px 11px;border-radius:8px;
   backdrop-filter:blur(4px);z-index:2;
 }
-.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:10px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:10px;margin-top:10px}
 .thumb{
   aspect-ratio:16/10;border-radius:10px;overflow:hidden;cursor:pointer;
   border:1.5px dashed var(--ink-300);background:var(--ink-50);
@@ -287,11 +287,6 @@ h1{font-size:38px;font-weight:700;line-height:1.08;margin-top:6px}
 }
 .wanote{font-size:11px;color:var(--ink-400);text-align:center;margin-top:12px;line-height:1.5}
 
-.pvbadge{
-  position:fixed;left:50%;transform:translateX(-50%);bottom:14px;z-index:60;
-  background:rgba(28,25,23,.9);color:#FDE68A;font-size:11px;font-weight:600;
-  letter-spacing:.08em;padding:7px 16px;border-radius:999px;backdrop-filter:blur(6px);
-}
 </style>
 </head>
 <body>
@@ -326,7 +321,7 @@ h1{font-size:38px;font-weight:700;line-height:1.08;margin-top:6px}
   <div class="layout">
     <!-- ══ MAIN ══ -->
     <main>
-      <div class="hero-img">
+      <div class="hero-img" id="dHero">
         <span class="ribbon" id="dRibbon"></span>
         <div class="slot">
           <svg class="ic" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg>
@@ -334,7 +329,7 @@ h1{font-size:38px;font-weight:700;line-height:1.08;margin-top:6px}
           <div class="s">Screenshot profil / roster akun</div>
         </div>
       </div>
-      <div class="thumbs"><div class="thumb on"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Roster 1</span></div><div class="thumb"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Roster 2</span></div><div class="thumb"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Lightcone</span></div><div class="thumb"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Inventory</span></div><div class="thumb"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Profile</span></div></div>
+      <div class="thumbs" id="dThumbs"><div class="thumb on"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Roster 1</span></div><div class="thumb"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Roster 2</span></div><div class="thumb"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Lightcone</span></div><div class="thumb"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Inventory</span></div><div class="thumb"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75z"/></svg><span class="tt">Profile</span></div></div>
 
       <div class="title-row">
         <div>
@@ -416,7 +411,6 @@ h1{font-size:38px;font-weight:700;line-height:1.08;margin-top:6px}
   </div>
 </div>
 
-<div class="pvbadge">PREVIEW — REVISI 3</div>
 <script src="assets/data.js"></script>
 <script src="assets/roster.js"></script>
 <script src="assets/product.js"></script>

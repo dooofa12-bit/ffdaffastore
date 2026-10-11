@@ -124,6 +124,23 @@
   $("dWA").href = wa ? "https://wa.me/" + wa + "?text=" + encodeURIComponent(msg) : "index.html#contact";
   $("dIK").href = acc.itemkuUrl || (D.links && D.links.itemkuStore) || "index.html#catalog";
 
+  /* ── gallery: real shots if account has them, else keep placeholders ── */
+  if (acc.shots && acc.shots.length && $("dHero") && $("dThumbs")) {
+    var first = acc.shots[0];
+    $("dHero").innerHTML = '<span class="ribbon" id="dRibbon">' + $("dRibbon").textContent + "</span>" +
+      '<img src="' + esc(first.src) + '" alt="' + esc(first.label) + '" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">';
+    $("dThumbs").innerHTML = acc.shots.map(function (s, i) {
+      return '<div class="thumb' + (i === 0 ? " on" : "") + '" data-src="' + esc(s.src) + '" style="padding:0;overflow:hidden">' +
+             '<img src="' + esc(s.src) + '" alt="' + esc(s.label) + '" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>';
+    }).join("");
+    $("dThumbs").addEventListener("click", function (e) {
+      var t = e.target.closest(".thumb");
+      if (!t) return;
+      $("dHero").querySelector("img").src = t.getAttribute("data-src");
+      $("dThumbs").querySelectorAll(".thumb").forEach(function (x) { x.classList.toggle("on", x === t); });
+    });
+  }
+
   /* ── sibling accounts nav (if the section exists) ── */
   var sib = $("dSiblings");
   if (sib) {
