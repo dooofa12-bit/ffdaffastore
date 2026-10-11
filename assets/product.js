@@ -23,7 +23,11 @@
   }
 
   var roster = ROSTERS[acc.id] || { featured: [], others: [], cones: [] };
-  var available = acc.status !== "Reserved";
+  var isSold = acc.status === "Sold";
+  var isReserved = acc.status === "Reserved";
+  var available = !isSold && !isReserved;
+  var statusLabel = isSold ? "Terjual" : (isReserved ? "Tereservasi" : "Tersedia");
+  var soldAgo = acc.soldAt ? window.timeAgo(acc.soldAt, "id") : "";
 
   document.title = acc.id + " — " + (D.brand && D.brand.name ? D.brand.name : "FFdaffastore");
 
@@ -34,8 +38,12 @@
   $("dTitle").textContent = acc.title;
 
   var badge = $("dBadge");
-  badge.textContent = available ? "Tersedia" : "Tereservasi";
-  if (!available) {
+  badge.textContent = statusLabel;
+  if (isSold) {
+    badge.style.background = "#F5F5F4";
+    badge.style.color = "#78716C";
+    badge.style.borderColor = "#E7E5E4";
+  } else if (isReserved) {
     badge.style.background = "#FEF3C7";
     badge.style.color = "#854D0E";
     badge.style.borderColor = "#FDE68A";
@@ -44,7 +52,7 @@
   /* ── stat cards (mirror of the catalog modal) ── */
   $("dStats").innerHTML =
     stat("Level Trailblaze", "TL " + acc.trailblazeLevel + " • " + acc.server, false) +
-    stat("Harga", acc.price, true) +
+    stat("Harga", isSold ? acc.price + "  (Terjual)" : acc.price, true) +
     stat("Karakter Limited", acc.limitedChars + " Characters", false) +
     stat("Lightcone Signature", acc.signWeapons + " Lightcone", false);
 
@@ -107,11 +115,14 @@
   }).join("");
 
   /* ── order card ── */
-  $("dPrice").textContent = acc.price;
+  var priceEl = $("dPrice");
+  priceEl.textContent = acc.price;
+  if (isSold) priceEl.style.cssText = "text-decoration:line-through;color:#A8A29E";
   $("dMeta").innerHTML =
     meta("Kode", esc(acc.id)) +
     meta("Server", esc(acc.server)) +
-    meta("Status", available ? "Tersedia" : "Tereservasi", available ? "#047857" : "#B45309") +
+    meta("Status", isSold ? "Terjual" + (soldAgo ? " &middot; " + esc(soldAgo) : "") : statusLabel,
+         isSold ? "#6B7280" : (isReserved ? "#B45309" : "#047857")) +
     meta("Proses", "&lt; 10 menit");
 
   function meta(k, v, color) {
@@ -123,6 +134,21 @@
   var msg = "Halo min, aku mau nanya akun " + acc.id + " (" + acc.price + ") masih ready?";
   $("dWA").href = wa ? "https://wa.me/" + wa + "?text=" + encodeURIComponent(msg) : "index.html#contact";
   $("dIK").href = acc.itemkuUrl || (D.links && D.links.itemkuStore) || "index.html#catalog";
+
+  if (isSold) {
+    ["dWA", "dIK"].forEach(function (id) {
+      var b = $(id);
+      if (!b) return;
+      b.removeAttribute("href");
+      b.style.pointerEvents = "none";
+      b.style.opacity = ".45";
+    });
+    var note = document.createElement("div");
+    note.style.cssText = "margin-top:10px;text-align:center;font-size:13px;font-weight:600;color:#78716C";
+    note.textContent = "Akun ini sudah terjual" + (soldAgo ? " — " + soldAgo : "");
+    var orderBody = $("dMeta") && $("dMeta").parentNode;
+    if (orderBody) orderBody.appendChild(note);
+  }
 
   /* ── gallery: real shots if account has them, else keep placeholders ── */
   if (acc.shots && acc.shots.length && $("dHero") && $("dThumbs")) {

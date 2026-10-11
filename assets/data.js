@@ -1,4 +1,16 @@
 // FFdaffastore - Site Data Configuration
+// Relative time helper ("3 jam lalu" / "3 hours ago") — shared by app.js & product.js
+window.timeAgo = function (iso, lang) {
+  if (!iso) return "";
+  var diff = (Date.now() - new Date(iso).getTime()) / 1000;
+  if (isNaN(diff) || diff < 0) diff = 0;
+  var m = Math.floor(diff / 60), h = Math.floor(diff / 3600), d = Math.floor(diff / 86400);
+  var en = lang === "en";
+  if (m < 60) return en ? m + "m ago" : m + " menit lalu";
+  if (h < 24) return en ? h + "h ago" : h + " jam lalu";
+  return en ? d + "d ago" : d + " hari lalu";
+};
+
 window.SITE_CONFIG = {
   brand: {
     name: "FFdaffastore",
@@ -10,7 +22,7 @@ window.SITE_CONFIG = {
   // Stats displayed on hero
   stats: {
     soldCount: "500+",
-    activeStock: "3",
+    activeStock: "2",
     satisfaction: "99.8%",
     avgProcessMinutes: "< 10m"
   },
@@ -79,7 +91,8 @@ window.SITE_CONFIG = {
       trailblazeLevel: 70,
       price: "Rp 499.999",
       image: "assets/img/catalog-3.webp",
-      status: "Available",
+      status: "Sold",
+      soldAt: "2026-10-11T11:30:00Z",
       limitedChars: 28,
       signWeapons: 5,
       highlights: ["Archer E1 + Sign", "Castorice + Sign", "28 Limited 5 Sign", "Story Amphoreus"],

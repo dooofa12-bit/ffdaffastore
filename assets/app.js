@@ -26,11 +26,14 @@ const i18n = {
     "catalog.title": "Current Listings",
     "catalog.desc": "Each account is vetted, clean history, backed by a 3-month warranty with replacement or 100% refund.",
     "catalog.filterAll": "All (3)",
-    "catalog.filterAvail": "Available (3)",
+    "catalog.filterAvail": "Available (2)",
     "catalog.filterReserved": "Reserved (0)",
+    "catalog.filterSold": "Sold (1)",
     "catalog.available": "Available",
     "catalog.reserved": "Reserved",
+    "catalog.sold": "Sold",
     "catalog.clickDetail": "Details",
+    "catalog.soldAgo": "Sold",
     "modal.tl": "Trailblaze Level",
     "modal.server": "Server",
     "modal.limited": "Limited Chars",
@@ -72,11 +75,14 @@ const i18n = {
     "catalog.title": "Listing Saat Ini",
     "catalog.desc": "Setiap akun sudah dicek riwayatnya, dilindungi garansi 3 bulan: opsi ganti unit baru atau 100% full refund.",
     "catalog.filterAll": "Semua (3)",
-    "catalog.filterAvail": "Tersedia (3)",
+    "catalog.filterAvail": "Tersedia (2)",
     "catalog.filterReserved": "Tereservasi (0)",
+    "catalog.filterSold": "Terjual (1)",
     "catalog.available": "Tersedia",
     "catalog.reserved": "Tereservasi",
+    "catalog.sold": "Terjual",
     "catalog.clickDetail": "Detail",
+    "catalog.soldAgo": "Terjual",
     "modal.tl": "Level Trailblaze",
     "modal.server": "Server",
     "modal.limited": "Karakter Limited",
@@ -104,6 +110,14 @@ const i18n = {
 };
 
 function t(key) { return i18n[lang][key] || i18n.en[key] || key; }
+
+// ─── Status helpers (Available / Reserved / Sold) ────────────────────────────
+function statusInfo(status) {
+  if (status === "Sold")     return { key: "catalog.sold",     cls: "bg-ink-100 text-ink-500 border border-ink-200",  color: "#6B7280" };
+  if (status === "Reserved") return { key: "catalog.reserved", cls: "bg-amber-50 text-amber-700 border border-amber-200", color: "#B45309" };
+  return { key: "catalog.available", cls: "bg-emerald-50 text-emerald-700 border border-emerald-200", color: "#047857" };
+}
+function soldAgo(acc) { return acc.soldAt ? window.timeAgo(acc.soldAt, lang) : ""; }
 
 function applyLang() {
   document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -154,10 +168,9 @@ document.getElementById("footerYear").textContent = new Date().getFullYear();
 function openModal(id) {
   const acc = D.catalog.find(c => c.id === id);
   if (!acc) return;
+  const st = statusInfo(acc.status);
+  const isSold = acc.status === "Sold";
   const isAvail = acc.status === "Available";
-  const badgeClass = isAvail
-    ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
-    : "bg-amber-50 text-amber-700 border border-amber-200";
 
   document.getElementById("modalId").textContent = acc.id;
   document.getElementById("modalTitle").textContent = acc.title;
@@ -182,8 +195,8 @@ function openModal(id) {
   }
 
   const badge = document.getElementById("modalBadge");
-  badge.textContent = isAvail ? t("catalog.available") : t("catalog.reserved");
-  badge.className = `text-xs font-semibold px-3 py-1 rounded-full ${badgeClass}`;
+  badge.textContent = isSold ? t("catalog.sold") : t(st.key);
+  badge.className = `text-xs font-semibold px-3 py-1 rounded-full ${st.cls}`;
 
   document.getElementById("modalStats").innerHTML = `
     <div class="bg-ink-50 p-2.5 sm:p-3 rounded-xl border border-ink-100">
@@ -192,7 +205,7 @@ function openModal(id) {
     </div>
     <div class="bg-ink-50 p-2.5 sm:p-3 rounded-xl border border-ink-100">
       <p class="text-[10px] text-ink-400 font-semibold uppercase tracking-wider">${t("modal.price")}</p>
-      <p class="font-heading text-base sm:text-lg font-bold text-gold-600 mt-0.5">${acc.price}</p>
+      <p class="font-heading text-base sm:text-lg font-bold text-gold-600 mt-0.5${isSold ? " line-through text-ink-400" : ""}">${acc.price}</p>
     </div>
     <div class="bg-ink-50 p-2.5 sm:p-3 rounded-xl border border-ink-100">
       <p class="text-[10px] text-ink-400 font-semibold uppercase tracking-wider">${t("modal.limited")}</p>
@@ -220,6 +233,16 @@ function openModal(id) {
   document.getElementById("modalItemku").href = acc.itemkuUrl || D.links.itemkuStore || "#";
   document.getElementById("modalDetail").href = `product.html?id=${acc.id}`;
 
+  // Sold: disable purchase CTAs
+  waBtn.classList.toggle("is-disabled", isSold);
+  waBtn.setAttribute("aria-disabled", isSold ? "true" : "false");
+  if (isSold) { waBtn.removeAttribute("href"); waBtn.style.pointerEvents = "none"; waBtn.style.opacity = ".45"; }
+  else { waBtn.style.pointerEvents = ""; waBtn.style.opacity = ""; }
+  const ikBtn = document.getElementById("modalItemku");
+  ikBtn.classList.toggle("is-disabled", isSold);
+  ikBtn.style.pointerEvents = isSold ? "none" : "";
+  ikBtn.style.opacity = isSold ? ".45" : "";
+
   const modal = document.getElementById("catalogModal");
   modal.classList.remove("hidden");
   modal.classList.add("flex");
@@ -237,38 +260,40 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal()
 
 function renderCatalog() {
   const grid = document.getElementById("catalogGrid");
-  const available = t("catalog.available");
-  const reserved  = t("catalog.reserved");
 
   const filtered = activeFilter === "all"
     ? D.catalog
     : D.catalog.filter(c => c.status === activeFilter);
 
   grid.innerHTML = filtered.map(acc => {
+    const st = statusInfo(acc.status);
+    const isSold = acc.status === "Sold";
     const isAvail = acc.status === "Available";
-    const statusLabel = isAvail ? available : reserved;
-    const statusClass = isAvail
-      ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
-      : "bg-amber-50 text-amber-700 border border-amber-200";
+    const statusLabel = t(st.key);
 
     const pulseDot = isAvail
       ? `<span class="relative flex h-2 w-2 mr-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span>`
       : "";
 
+    const ago = isSold ? soldAgo(acc) : "";
+    const agoTag = ago ? `<div class="absolute bottom-2 right-2 text-[10px] font-semibold bg-ink-900/80 text-white backdrop-blur px-2 py-0.5 rounded-md">${t("catalog.soldAgo")} ${ago}</div>` : "";
+    const imgCls = isSold ? " grayscale opacity-70" : "";
+
     return `
-      <article data-id="${acc.id}" class="catalog-card group bg-white border border-ink-200 rounded-2xl overflow-hidden cursor-pointer flex flex-col justify-between">
+      <article data-id="${acc.id}" class="catalog-card group bg-white border border-ink-200 rounded-2xl overflow-hidden cursor-pointer flex flex-col justify-between${isSold ? " opacity-95" : ""}">
         <div>
           <div class="aspect-16-9 img-slot relative overflow-hidden">
             <img src="${acc.image}" alt="${acc.title}" loading="lazy"
                  onerror="this.style.display='none'; this.parentNode.setAttribute('data-empty','1')"
-                 class="absolute inset-0 w-full h-full object-cover rounded-t-2xl transition-transform duration-300 group-hover:scale-105">
+                 class="absolute inset-0 w-full h-full object-cover rounded-t-2xl transition-transform duration-300 group-hover:scale-105${imgCls}">
             <span class="placeholder-label text-ink-400 text-xs">Image</span>
             <div class="absolute bottom-2 left-2 text-[10px] font-semibold bg-ink-900/80 text-white backdrop-blur px-2 py-0.5 rounded-md">TL ${acc.trailblazeLevel}</div>
+            ${agoTag}
           </div>
           <div class="p-5 pb-2">
             <div class="flex items-center justify-between mb-1">
               <span class="text-xs text-ink-400 font-medium">${acc.id} • ${acc.server}</span>
-              <span class="inline-flex items-center text-xs font-semibold px-2.5 py-0.5 rounded-full ${statusClass}">
+              <span class="inline-flex items-center text-xs font-semibold px-2.5 py-0.5 rounded-full ${st.cls}">
                 ${pulseDot}${statusLabel}
               </span>
             </div>
@@ -277,7 +302,7 @@ function renderCatalog() {
           </div>
         </div>
         <div class="p-5 pt-3 border-t border-ink-100 flex items-center justify-between gap-2">
-          <p class="font-heading text-xl sm:text-2xl font-bold text-ink-900">${acc.price}</p>
+          <p class="font-heading text-xl sm:text-2xl font-bold text-ink-900${isSold ? " line-through text-ink-400" : ""}">${acc.price}</p>
           <span class="text-xs font-semibold text-gold-700 bg-gold-50 border border-gold-200/70 px-2.5 py-1 rounded-lg group-hover:bg-gold-500 group-hover:text-white group-hover:border-gold-500 transition-all inline-flex items-center gap-1 shrink-0">
             ${t("catalog.clickDetail")} →
           </span>
