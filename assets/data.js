@@ -22,7 +22,7 @@ window.SITE_CONFIG = {
   // Stats displayed on hero
   stats: {
     soldCount: "500+",
-    activeStock: "2",
+    activeStock: "3",
     satisfaction: "99.8%",
     avgProcessMinutes: "< 10m"
   },
@@ -30,7 +30,7 @@ window.SITE_CONFIG = {
   // Official store & contact links
   links: {
     itemkuStore: "https://www.itemku.com/id/t/ffdaffastore", // toko itemku resmi
-    whatsapp: "+6285384858898",
+    whatsapp: "+628973353831",
     discord: "",
     instagram: "",
     email: ""
@@ -106,6 +106,29 @@ window.SITE_CONFIG = {
         { src: "assets/img/shot/hsr03-lightcone.webp", label: "Light Cone" },
         { src: "assets/img/shot/hsr03-profile.webp", label: "Profile" },
         { src: "assets/img/shot/hsr03-power.webp", label: "Trailblaze Power" }
+      ]
+    },
+    {
+      id: "HSR-04",
+      title: "HSR Account #04 (Premium)",
+      server: "Asia",
+      trailblazeLevel: 70,
+      price: "Rp 900.000",
+      image: "assets/img/catalog-4.webp",
+      status: "Available",
+      limitedChars: 37,
+      signWeapons: 9,
+      highlights: ["Rin Tohsaka + Sign", "Archer + Sign", "Acheron E1 + Sign", "UID Sepuh 8034"],
+      enHighlights: ["Rin Tohsaka + Sign", "Archer + Sign", "Acheron E1 + Sign", "Veteran UID 8034"],
+      desc: "Akun HSR Asia TL70 Premium, 37 Limited, 9 Signature. Rin Tohsaka Sign, Archer Sign, Acheron E1 Sign, Robin E1, Blade E1, Rate On, UID Sepuh 8034, Story Amphoreus.",
+      enDesc: "Premium HSR Asia TL70 account, 37 Limited, 9 Signatures. Rin Tohsaka Sign, Archer Sign, Acheron E1 Sign, Robin E1, Blade E1, Rate On, Veteran UID 8034, Amphoreus Story.",
+      itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-akun-hsr-asia-tl70-premium-37-limit-9-sign-archer-sign-rin-tohsaka-sign-rate-on-1x-gcs-temurah-ffdaffastore/4410715?from=product_list_page&fromAds=1&ads_placement=2",
+      shots: [
+        { src: "assets/img/shot/hsr04-hero.webp", label: "Banner akun" },
+        { src: "assets/img/shot/hsr04-profile.webp", label: "Profile" },
+        { src: "assets/img/shot/hsr04-lightcone.webp", label: "Light Cone" },
+        { src: "assets/img/shot/hsr04-power.webp", label: "Trailblaze Power" },
+        { src: "assets/img/shot/hsr04-story.webp", label: "Pengalaman Trailblaze" }
       ]
     }
   ],

@@ -595,5 +595,234 @@ window.ROSTERS = {
         "owner": "Ruan Mei"
       }
     ]
+  },
+  "HSR-04": {
+    "featured": [
+      {
+        "id": 1508,
+        "tag": "+ Signature",
+        "name": "Rin Tohsaka",
+        "el": "Quantum"
+      },
+      {
+        "id": 1015,
+        "tag": "+ Signature",
+        "name": "Archer",
+        "el": "Quantum"
+      },
+      {
+        "id": 1308,
+        "tag": "E1 + Signature",
+        "name": "Acheron",
+        "el": "Thunder"
+      },
+      {
+        "id": 1410,
+        "tag": "+ Signature",
+        "name": "Hysilens",
+        "el": "Physical"
+      },
+      {
+        "id": 1321,
+        "tag": "+ Signature",
+        "name": "The Dahlia",
+        "el": "Fire"
+      },
+      {
+        "id": 1310,
+        "tag": "+ Signature",
+        "name": "Firefly",
+        "el": "Fire"
+      },
+      {
+        "id": 1221,
+        "tag": "+ Signature",
+        "name": "Yunli",
+        "el": "Physical"
+      },
+      {
+        "id": 1005,
+        "tag": "+ Signature",
+        "name": "Kafka",
+        "el": "Thunder"
+      },
+      {
+        "id": 1225,
+        "tag": "+ Signature",
+        "name": "Fugue",
+        "el": "Fire"
+      },
+      {
+        "id": 1309,
+        "tag": "E1",
+        "name": "Robin",
+        "el": "Physical"
+      },
+      {
+        "id": 1205,
+        "tag": "E1",
+        "name": "Blade",
+        "el": "Wind"
+      }
+    ],
+    "others": [
+      {
+        "id": 1507,
+        "name": "Mortenax Blade",
+        "el": "Fire"
+      },
+      {
+        "id": 1222,
+        "name": "Lingsha",
+        "el": "Fire"
+      },
+      {
+        "id": 1509,
+        "name": "Gilgamesh",
+        "el": "Thunder"
+      },
+      {
+        "id": 1505,
+        "name": "Evanescia",
+        "el": "Physical"
+      },
+      {
+        "id": 1504,
+        "name": "Ashveil",
+        "el": "Thunder"
+      },
+      {
+        "id": 1502,
+        "name": "Yao Guang",
+        "el": "Physical"
+      },
+      {
+        "id": 1415,
+        "name": "Cyrene",
+        "el": "Ice"
+      },
+      {
+        "id": 1414,
+        "name": "Dan Heng • Permansor Terrae",
+        "el": "Physical"
+      },
+      {
+        "id": 1406,
+        "name": "Cipher",
+        "el": "Quantum"
+      },
+      {
+        "id": 1405,
+        "name": "Anaxa",
+        "el": "Wind"
+      },
+      {
+        "id": 1403,
+        "name": "Tribbie",
+        "el": "Quantum"
+      },
+      {
+        "id": 1401,
+        "name": "The Herta",
+        "el": "Ice"
+      },
+      {
+        "id": 1317,
+        "name": "Rappa",
+        "el": "Imaginary"
+      },
+      {
+        "id": 1313,
+        "name": "Sunday",
+        "el": "Imaginary"
+      },
+      {
+        "id": 1307,
+        "name": "Black Swan",
+        "el": "Wind"
+      },
+      {
+        "id": 1306,
+        "name": "Sparkle",
+        "el": "Quantum"
+      },
+      {
+        "id": 1305,
+        "name": "Dr. Ratio",
+        "el": "Imaginary"
+      },
+      {
+        "id": 1304,
+        "name": "Aventurine",
+        "el": "Imaginary"
+      },
+      {
+        "id": 1303,
+        "name": "Ruan Mei",
+        "el": "Ice"
+      },
+      {
+        "id": 1217,
+        "name": "Huohuo",
+        "el": "Wind"
+      },
+      {
+        "id": 1208,
+        "name": "Fu Xuan",
+        "el": "Quantum"
+      },
+      {
+        "id": 1006,
+        "name": "Silver Wolf",
+        "el": "Quantum"
+      }
+    ],
+    "cones": [
+      {
+        "id": "23061",
+        "name": "Flickering Stars",
+        "owner": "Rin Tohsaka"
+      },
+      {
+        "id": "23046",
+        "name": "The Hell Where Ideals Burn",
+        "owner": "Archer"
+      },
+      {
+        "id": "23024",
+        "name": "Along the Passing Shore",
+        "owner": "Acheron"
+      },
+      {
+        "id": "23047",
+        "name": "Why Does the Ocean Sing",
+        "owner": "Hysilens"
+      },
+      {
+        "id": "23050",
+        "name": "Never Forget Her Flame",
+        "owner": "The Dahlia"
+      },
+      {
+        "id": "23025",
+        "name": "Whereabouts Should Dreams Rest",
+        "owner": "Firefly"
+      },
+      {
+        "id": "23030",
+        "name": "Dance at Sunset",
+        "owner": "Yunli"
+      },
+      {
+        "id": "23006",
+        "name": "Patience Is All You Need",
+        "owner": "Kafka"
+      },
+      {
+        "id": "23035",
+        "name": "Long Road Leads Home",
+        "owner": "Fugue"
+      }
+    ]
   }
 };
