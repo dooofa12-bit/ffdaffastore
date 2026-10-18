@@ -183,7 +183,7 @@ window.SITE_CONFIG = {
       server: "Asia",
       trailblazeLevel: 70,
       price: "Rp 700.000",
-      image: "",
+      image: "assets/img/catalog-7.webp",
       status: "Available",
       limitedChars: 29,
       signWeapons: 7,
@@ -192,7 +192,12 @@ window.SITE_CONFIG = {
       desc: "Akun HSR Asia TL70, 29 Limited, 7 Signature. Aventurine Waveflair Sign, Silver Wolf LV.999 Sign, Phainon E1 Sign, Sunday E1 Sign, Yao Guang Sign, Archer Sign, Pity 70 On, Rate On, Costume March 7th + Ruan Mei, Endgame Cleared, Story Planarcadia.",
       enDesc: "HSR Asia TL70 account, 29 Limited, 7 Signatures. Aventurine Waveflair, Silver Wolf LV.999, Phainon E1, Sunday E1, Yao Guang and Archer Signs, Pity 70, Rate On, March 7th + Ruan Mei costumes, Endgame Cleared, Planarcadia Story.",
       itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-akun-hsr-asia-tl70-29-limit-7-sign-aventurine-waveflair-sign-elation-party-pity-70-on-story-planarcadia-termurah-ffdaffastore/4417425",
-      shots: []
+      shots: [
+        { src: "assets/img/shot/hsr07-hero.webp", label: "Profile akun" },
+        { src: "assets/img/shot/hsr07-lightcone.webp", label: "Light Cone" },
+        { src: "assets/img/shot/hsr07-power.webp", label: "Trailblaze Power" },
+        { src: "assets/img/shot/hsr07-story.webp", label: "Pengalaman Trailblaze" }
+      ]
     },
     {
       id: "HSR-08",

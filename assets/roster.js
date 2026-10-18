@@ -1,5 +1,148 @@
 // FFdaffastore - per-account roster data (generated)
 window.ROSTERS = {
+  "HSR-07": {
+    "featured": [
+          {
+                "id": 1408,
+                "name": "Phainon",
+                "el": "Physical",
+                "tag": "E1 + Signature"
+          },
+          {
+                "id": 1313,
+                "name": "Sunday",
+                "el": "Imaginary",
+                "tag": "E1 + Signature"
+          },
+          {
+                "id": 1112,
+                "name": "Topaz & Numby",
+                "el": "Fire",
+                "tag": "E1"
+          },
+          {
+                "id": 1304,
+                "name": "Aventurine",
+                "el": "Imaginary",
+                "tag": "Waveflair + Signature"
+          },
+          {
+                "id": 1006,
+                "name": "Silver Wolf",
+                "el": "Quantum",
+                "tag": "LV.999 + Signature"
+          },
+          {
+                "id": 1502,
+                "name": "Yao Guang",
+                "el": "Lightning",
+                "tag": "+ Signature"
+          }
+    ],
+    "others": [
+          {
+                "id": 1015,
+                "name": "Archer",
+                "el": "Quantum"
+          },
+          {
+                "id": 1412,
+                "name": "Cerydra",
+                "el": "Quantum"
+          },
+          {
+                "id": 1407,
+                "name": "Castorice",
+                "el": "Quantum"
+          },
+          {
+                "id": 1509,
+                "name": "Gilgamesh",
+                "el": "Fire"
+          },
+          {
+                "id": 1414,
+                "name": "Dan Heng • Permansor Terrae",
+                "el": "Imaginary"
+          },
+          {
+                "id": 1315,
+                "name": "Boothill",
+                "el": "Physical"
+          },
+          {
+                "id": 1309,
+                "name": "Robin",
+                "el": "Physical"
+          },
+          {
+                "id": 1306,
+                "name": "Sparkle",
+                "el": "Quantum"
+          },
+          {
+                "id": 1305,
+                "name": "Dr. Ratio",
+                "el": "Imaginary"
+          },
+          {
+                "id": 1303,
+                "name": "Ruan Mei",
+                "el": "Ice"
+          },
+          {
+                "id": 1220,
+                "name": "Feixiao",
+                "el": "Wind"
+          },
+          {
+                "id": 1217,
+                "name": "Huohuo",
+                "el": "Wind"
+          },
+          {
+                "id": 1102,
+                "name": "Seele",
+                "el": "Quantum"
+          },
+          {
+                "id": 1205,
+                "name": "Blade",
+                "el": "Wind"
+          },
+          {
+                "id": 1208,
+                "name": "Fu Xuan",
+                "el": "Quantum"
+          }
+    ],
+    "cones": [
+          {
+                "name": "Phainon — Signature",
+                "el": "Physical"
+          },
+          {
+                "name": "Sunday — Signature",
+                "el": "Imaginary"
+          },
+          {
+                "name": "Topaz & Numby — Signature",
+                "el": "Fire"
+          },
+          {
+                "name": "Aventurine — Signature",
+                "el": "Imaginary"
+          },
+          {
+                "name": "Silver Wolf — Signature",
+                "el": "Quantum"
+          },
+          {
+                "name": "Yao Guang — Signature",
+                "el": "Lightning"
+          }
+    ]
+  },
   "HSR-06": {
     "featured": [
           {
