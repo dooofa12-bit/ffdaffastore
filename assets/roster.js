@@ -1,5 +1,151 @@
 // FFdaffastore - per-account roster data (generated)
 window.ROSTERS = {
+  "HSR-05": {
+    "featured": [
+          {
+                "id": 1415,
+                "name": "Cyrene",
+                "el": "Quantum",
+                "tag": "E2 + Signature"
+          },
+          {
+                "id": 1308,
+                "name": "Acheron",
+                "el": "Thunder",
+                "tag": "E1 + Signature"
+          },
+          {
+                "id": 1401,
+                "name": "The Herta",
+                "el": "Ice",
+                "tag": "+ Signature"
+          },
+          {
+                "id": 1313,
+                "name": "Sunday",
+                "el": "Imaginary",
+                "tag": "+ Signature"
+          }
+    ],
+    "others": [
+          {
+                "id": 1306,
+                "name": "Sparkle",
+                "el": "Quantum"
+          },
+          {
+                "id": 1303,
+                "name": "Ruan Mei",
+                "el": "Ice"
+          },
+          {
+                "id": 1507,
+                "name": "Mortenax Blade",
+                "el": "Physical"
+          },
+          {
+                "id": 1509,
+                "name": "Gilgamesh",
+                "el": "Fire"
+          },
+          {
+                "id": 1502,
+                "name": "Yao Guang",
+                "el": "Lightning"
+          },
+          {
+                "id": 1414,
+                "name": "Dan Heng • Permansor Terrae",
+                "el": "Imaginary"
+          },
+          {
+                "id": 1405,
+                "name": "Anaxa",
+                "el": "Wind"
+          },
+          {
+                "id": 1317,
+                "name": "Rappa",
+                "el": "Imaginary"
+          },
+          {
+                "id": 1309,
+                "name": "Robin",
+                "el": "Physical"
+          },
+          {
+                "id": 1305,
+                "name": "Dr. Ratio",
+                "el": "Imaginary"
+          },
+          {
+                "id": 1304,
+                "name": "Aventurine",
+                "el": "Imaginary"
+          },
+          {
+                "id": 1222,
+                "name": "Lingsha",
+                "el": "Fire"
+          },
+          {
+                "id": 1221,
+                "name": "Yunli",
+                "el": "Physical"
+          },
+          {
+                "id": 1220,
+                "name": "Feixiao",
+                "el": "Wind"
+          },
+          {
+                "id": 1217,
+                "name": "Huohuo",
+                "el": "Wind"
+          },
+          {
+                "id": 1015,
+                "name": "Archer",
+                "el": "Quantum"
+          },
+          {
+                "id": 1205,
+                "name": "Blade",
+                "el": "Wind"
+          },
+          {
+                "id": 1102,
+                "name": "Seele",
+                "el": "Quantum"
+          }
+    ],
+    "cones": [
+          {
+                "name": "Cyrene — Signature",
+                "el": "Quantum"
+          },
+          {
+                "name": "Acheron — Signature",
+                "el": "Thunder"
+          },
+          {
+                "name": "The Herta — Signature",
+                "el": "Ice"
+          },
+          {
+                "name": "Sunday — Signature",
+                "el": "Imaginary"
+          },
+          {
+                "name": "Himeko Nova — Signature",
+                "el": "Fire"
+          },
+          {
+                "name": "Saber — Signature",
+                "el": "Wind"
+          }
+    ]
+  },
   "HSR-01": {
     "featured": [
       {

@@ -138,7 +138,7 @@ window.SITE_CONFIG = {
       server: "Asia",
       trailblazeLevel: 70,
       price: "Rp 600.000",
-      image: "",
+      image: "assets/img/catalog-5.webp",
       status: "Available",
       limitedChars: 29,
       signWeapons: 6,
@@ -147,7 +147,12 @@ window.SITE_CONFIG = {
       desc: "Akun HSR Asia TL70, 29 Limited, 6 Signature. Cyrene E2 Sign, Acheron E1 Sign, Himeko Nova Sign, The Herta Sign, Sunday Sign, Saber Sign, Ruan Mei E1, Rate On, Costume March 7th + Ruan Mei, Endgame Cleared, Story Planarcadia.",
       enDesc: "HSR Asia TL70 account, 29 Limited, 6 Signatures. Cyrene E2 + Acheron E1 Signs, Himeko Nova, The Herta, Sunday and Saber Signs, Ruan Mei E1, Rate On, March 7th + Ruan Mei costumes, Endgame Cleared, Planarcadia Story.",
       itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-akun-hsr-asia-tl70-29-limit-6-sign-cyrene-e2-sign-acheron-e1-sign-rate-on-story-planarcadia-temurah-ffdaffastore/4417346",
-      shots: []
+      shots: [
+        { src: "assets/img/shot/hsr05-hero.webp", label: "Profile akun" },
+        { src: "assets/img/shot/hsr05-lightcone.webp", label: "Light Cone" },
+        { src: "assets/img/shot/hsr05-power.webp", label: "Trailblaze Power" },
+        { src: "assets/img/shot/hsr05-story.webp", label: "Pengalaman Trailblaze" }
+      ]
     },
     {
       id: "HSR-06",
