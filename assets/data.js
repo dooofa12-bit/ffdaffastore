@@ -160,7 +160,7 @@ window.SITE_CONFIG = {
       server: "Asia",
       trailblazeLevel: 70,
       price: "Rp 750.000",
-      image: "",
+      image: "assets/img/catalog-6.webp",
       status: "Available",
       limitedChars: 26,
       signWeapons: 11,
@@ -170,7 +170,9 @@ window.SITE_CONFIG = {
       enDesc: "HSR Asia TL70 Gacha account, 26 Limited, 11 Signatures. 170x Golden Tickets, 2x Golden Companion Spirits, Acheron E2 + Tribbie E1 + Ruan Mei E1 Signs, Fugue, Castorice, Phainon and Dan Heng PT Signs, Endgame Cleared, Planarcadia Story.",
       itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-akun-hsr-asia-tl70-gacha-26-limit-11-sign-170x-golden-ticket-2x-gcs-tribbie-e1-sign-acheron-e2-sign-story-planarcadia-termurah-ffdaffastore/4417385",
       shots: [
+        { src: "assets/img/shot/hsr06-hero.webp", label: "Profile akun" },
         { src: "assets/img/shot/hsr06-lightcone.webp", label: "Light Cone" },
+        { src: "assets/img/shot/hsr06-warp.webp", label: "Event Warp" },
         { src: "assets/img/shot/hsr06-power.webp", label: "Trailblaze Power" },
         { src: "assets/img/shot/hsr06-story.webp", label: "Pengalaman Trailblaze" }
       ]
