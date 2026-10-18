@@ -25,10 +25,10 @@ const i18n = {
     "catalog.eyebrow": "Catalog",
     "catalog.title": "Current Listings",
     "catalog.desc": "Each account is vetted, clean history, backed by a 3-month warranty with replacement or 100% refund.",
-    "catalog.filterAll": "All (4)",
-    "catalog.filterAvail": "Available (3)",
-    "catalog.filterReserved": "Reserved (0)",
-    "catalog.filterSold": "Sold (1)",
+    "catalog.filterAll": "All ({n})",
+    "catalog.filterAvail": "Available ({n})",
+    "catalog.filterReserved": "Reserved ({n})",
+    "catalog.filterSold": "Sold ({n})",
     "catalog.available": "Available",
     "catalog.reserved": "Reserved",
     "catalog.sold": "Sold",
@@ -74,10 +74,10 @@ const i18n = {
     "catalog.eyebrow": "Katalog",
     "catalog.title": "Listing Saat Ini",
     "catalog.desc": "Setiap akun sudah dicek riwayatnya, dilindungi garansi 3 bulan: opsi ganti unit baru atau 100% full refund.",
-    "catalog.filterAll": "Semua (4)",
-    "catalog.filterAvail": "Tersedia (3)",
-    "catalog.filterReserved": "Tereservasi (0)",
-    "catalog.filterSold": "Terjual (1)",
+    "catalog.filterAll": "Semua ({n})",
+    "catalog.filterAvail": "Tersedia ({n})",
+    "catalog.filterReserved": "Tereservasi ({n})",
+    "catalog.filterSold": "Terjual ({n})",
     "catalog.available": "Tersedia",
     "catalog.reserved": "Tereservasi",
     "catalog.sold": "Terjual",
@@ -111,6 +111,17 @@ const i18n = {
 
 function t(key) { return i18n[lang][key] || i18n.en[key] || key; }
 
+// Live counts for the catalog filter tabs — derived from the catalog itself so
+// the numbers can never drift out of sync with the data again.
+function filterCount(key) {
+  const C = (window.SITE_CONFIG && window.SITE_CONFIG.catalog) || [];
+  if (key === "catalog.filterAll") return C.length;
+  if (key === "catalog.filterAvail") return C.filter(c => c.status === "Available").length;
+  if (key === "catalog.filterReserved") return C.filter(c => c.status === "Reserved").length;
+  if (key === "catalog.filterSold") return C.filter(c => c.status === "Sold").length;
+  return "";
+}
+
 // ─── Status helpers (Available / Reserved / Sold) ────────────────────────────
 function statusInfo(status) {
   if (status === "Sold")     return { key: "catalog.sold",     cls: "bg-ink-100 text-ink-500 border border-ink-200",  color: "#6B7280" };
@@ -122,10 +133,12 @@ function soldAgo(acc) { return acc.soldAt ? window.timeAgo(acc.soldAt, lang) : "
 function applyLang() {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
+    const raw = t(key);
+    const txt = raw.includes("{n}") ? raw.replace("{n}", filterCount(key)) : raw;
     if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-      el.placeholder = t(key);
+      el.placeholder = txt;
     } else {
-      el.textContent = t(key);
+      el.textContent = txt;
     }
   });
 }
