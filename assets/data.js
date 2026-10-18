@@ -205,7 +205,7 @@ window.SITE_CONFIG = {
       server: "Asia",
       trailblazeLevel: 70,
       price: "Rp 900.000",
-      image: "",
+      image: "assets/img/catalog-8.webp",
       status: "Available",
       limitedChars: 27,
       signWeapons: 12,
@@ -214,7 +214,12 @@ window.SITE_CONFIG = {
       desc: "Akun HSR Asia TL70 Premium, 27 Limited, 12 Signature. Castorice Sign, Evernight Sign, Hyacine Sign, Robin Sign, Firefly Sign, Fugue Sign, Saber Sign, Archer Sign, The Herta Sign, Silver Wolf LV.999 Sign, Endgame Full Star, Costume March 7th + Ruan Mei, Story Planarcadia.",
       enDesc: "Premium HSR Asia TL70 account, 27 Limited, 12 Signatures. Castorice, Evernight, Hyacine, Robin, Firefly, Fugue, Saber, Archer, The Herta and Silver Wolf LV.999 Signs, Endgame Full Star, March 7th + Ruan Mei costumes, Planarcadia Story.",
       itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-akun-hsr-asia-tl70-premium-elation-team-rememberance-team-archer-team-27-limit-12-sign-endgame-fullstar-story-planarcadia-termurah-ffdaffastore/4417478",
-      shots: []
+      shots: [
+        { src: "assets/img/shot/hsr08-hero.webp", label: "Profile akun" },
+        { src: "assets/img/shot/hsr08-lightcone.webp", label: "Light Cone" },
+        { src: "assets/img/shot/hsr08-endgame.webp", label: "Memory of Chaos" },
+        { src: "assets/img/shot/hsr08-story.webp", label: "Pengalaman Trailblaze" }
+      ]
     }
   ],
 
