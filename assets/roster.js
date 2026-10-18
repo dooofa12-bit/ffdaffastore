@@ -133,36 +133,44 @@ window.ROSTERS = {
     ],
     "cones": [
           {
-                "name": "Castorice — Signature",
-                "el": "Quantum"
+                "id": "23040",
+                "name": "Make Farewells More Beautiful",
+                "owner": "Castorice"
           },
           {
-                "name": "Evernight — Signature",
-                "el": "Ice"
+                "id": "23049",
+                "name": "To Evernight's Stars",
+                "owner": "Evernight"
           },
           {
-                "name": "Hyacine — Signature",
-                "el": "Ice"
+                "id": "23042",
+                "name": "Long May Rainbows Adorn the Sky",
+                "owner": "Hyacine"
           },
           {
-                "name": "Robin — Signature",
-                "el": "Physical"
+                "id": "23026",
+                "name": "Flowing Nightglow",
+                "owner": "Robin"
           },
           {
-                "name": "Firefly — Signature",
-                "el": "Fire"
+                "id": "23025",
+                "name": "Whereabouts Should Dreams Rest",
+                "owner": "Firefly"
           },
           {
-                "name": "Silver Wolf — Signature",
-                "el": "Quantum"
+                "id": "23007",
+                "name": "Incessant Rain",
+                "owner": "Silver Wolf"
           },
           {
-                "name": "Saber — Signature",
-                "el": "Wind"
+                "id": "23045",
+                "name": "A Thankless Coronation",
+                "owner": "Saber"
           },
           {
-                "name": "The Herta — Signature",
-                "el": "Ice"
+                "id": "23037",
+                "name": "Into the Unreachable Veil",
+                "owner": "The Herta"
           }
     ]
   },
@@ -284,28 +292,34 @@ window.ROSTERS = {
     ],
     "cones": [
           {
-                "name": "Phainon — Signature",
-                "el": "Physical"
+                "id": "23044",
+                "name": "Thus Burns the Dawn",
+                "owner": "Phainon"
           },
           {
-                "name": "Sunday — Signature",
-                "el": "Imaginary"
+                "id": "23034",
+                "name": "A Grounded Ascent",
+                "owner": "Sunday"
           },
           {
-                "name": "Topaz & Numby — Signature",
-                "el": "Fire"
+                "id": "23016",
+                "name": "Worrisome, Blissful",
+                "owner": "Topaz & Numby"
           },
           {
-                "name": "Aventurine — Signature",
-                "el": "Imaginary"
+                "id": "23023",
+                "name": "Inherently Unjust Destiny",
+                "owner": "Aventurine"
           },
           {
-                "name": "Silver Wolf — Signature",
-                "el": "Quantum"
+                "id": "23007",
+                "name": "Incessant Rain",
+                "owner": "Silver Wolf"
           },
           {
-                "name": "Yao Guang — Signature",
-                "el": "Lightning"
+                "id": "23054",
+                "name": "When She Decided to See",
+                "owner": "Yao Guang"
           }
     ]
   },
@@ -417,28 +431,34 @@ window.ROSTERS = {
     ],
     "cones": [
           {
-                "name": "Acheron — Signature",
-                "el": "Thunder"
+                "id": "23024",
+                "name": "Along the Passing Shore",
+                "owner": "Acheron"
           },
           {
-                "name": "Tribbie — Signature",
-                "el": "Quantum"
+                "id": "23038",
+                "name": "If Time Were a Flower",
+                "owner": "Tribbie"
           },
           {
-                "name": "Ruan Mei — Signature",
-                "el": "Ice"
+                "id": "23027",
+                "name": "Sailing Towards a Second Life",
+                "owner": "Ruan Mei"
           },
           {
-                "name": "Castorice — Signature",
-                "el": "Quantum"
+                "id": "23040",
+                "name": "Make Farewells More Beautiful",
+                "owner": "Castorice"
           },
           {
-                "name": "Phainon — Signature",
-                "el": "Physical"
+                "id": "23044",
+                "name": "Thus Burns the Dawn",
+                "owner": "Phainon"
           },
           {
-                "name": "Fugue — Signature",
-                "el": "Fire"
+                "id": "23035",
+                "name": "Long Road Leads Home",
+                "owner": "Fugue"
           }
     ]
   },
@@ -563,29 +583,35 @@ window.ROSTERS = {
     ],
     "cones": [
           {
-                "name": "Cyrene — Signature",
-                "el": "Quantum"
+                "id": "23052",
+                "name": "This Love, Forever",
+                "owner": "Cyrene"
           },
           {
-                "name": "Acheron — Signature",
-                "el": "Thunder"
+                "id": "23024",
+                "name": "Along the Passing Shore",
+                "owner": "Acheron"
           },
           {
-                "name": "The Herta — Signature",
-                "el": "Ice"
+                "id": "23037",
+                "name": "Into the Unreachable Veil",
+                "owner": "The Herta"
           },
           {
-                "name": "Sunday — Signature",
-                "el": "Imaginary"
+                "id": "23034",
+                "name": "A Grounded Ascent",
+                "owner": "Sunday"
           },
           {
-                "name": "Himeko Nova — Signature",
-                "el": "Fire"
+                "id": "23045",
+                "name": "A Thankless Coronation",
+                "owner": "Saber"
           },
-          {
-                "name": "Saber — Signature",
-                "el": "Wind"
-          }
+      {
+       "id": "23060",
+       "name": "A Star That Lights the Night",
+       "owner": "Himeko Nova"
+      }
     ]
   },
   "HSR-01": {
