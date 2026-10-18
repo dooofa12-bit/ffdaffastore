@@ -1,5 +1,138 @@
 // FFdaffastore - per-account roster data (generated)
 window.ROSTERS = {
+  "HSR-06": {
+    "featured": [
+          {
+                "id": 1308,
+                "name": "Acheron",
+                "el": "Thunder",
+                "tag": "E2 + Signature"
+          },
+          {
+                "id": 1403,
+                "name": "Tribbie",
+                "el": "Quantum",
+                "tag": "E1 + Signature"
+          },
+          {
+                "id": 1303,
+                "name": "Ruan Mei",
+                "el": "Ice",
+                "tag": "E1 + Signature"
+          },
+          {
+                "id": 1407,
+                "name": "Castorice",
+                "el": "Quantum",
+                "tag": "+ Signature"
+          },
+          {
+                "id": 1408,
+                "name": "Phainon",
+                "el": "Physical",
+                "tag": "+ Signature"
+          },
+          {
+                "id": 1225,
+                "name": "Fugue",
+                "el": "Fire",
+                "tag": "+ Signature"
+          }
+    ],
+    "others": [
+          {
+                "id": 1414,
+                "name": "Dan Heng • Permansor Terrae",
+                "el": "Imaginary"
+          },
+          {
+                "id": 1317,
+                "name": "Rappa",
+                "el": "Imaginary"
+          },
+          {
+                "id": 1306,
+                "name": "Sparkle",
+                "el": "Quantum"
+          },
+          {
+                "id": 1015,
+                "name": "Archer",
+                "el": "Quantum"
+          },
+          {
+                "id": 1305,
+                "name": "Dr. Ratio",
+                "el": "Imaginary"
+          },
+          {
+                "id": 1412,
+                "name": "Cerydra",
+                "el": "Quantum"
+          },
+          {
+                "id": 1321,
+                "name": "The Dahlia",
+                "el": "Physical"
+          },
+          {
+                "id": 1313,
+                "name": "Sunday",
+                "el": "Imaginary"
+          },
+          {
+                "id": 1307,
+                "name": "Black Swan",
+                "el": "Wind"
+          },
+          {
+                "id": 1304,
+                "name": "Aventurine",
+                "el": "Imaginary"
+          },
+          {
+                "id": 1218,
+                "name": "Jiaoqiu",
+                "el": "Fire"
+          },
+          {
+                "id": 1205,
+                "name": "Blade",
+                "el": "Wind"
+          },
+          {
+                "id": 1005,
+                "name": "Kafka",
+                "el": "Lightning"
+          }
+    ],
+    "cones": [
+          {
+                "name": "Acheron — Signature",
+                "el": "Thunder"
+          },
+          {
+                "name": "Tribbie — Signature",
+                "el": "Quantum"
+          },
+          {
+                "name": "Ruan Mei — Signature",
+                "el": "Ice"
+          },
+          {
+                "name": "Castorice — Signature",
+                "el": "Quantum"
+          },
+          {
+                "name": "Phainon — Signature",
+                "el": "Physical"
+          },
+          {
+                "name": "Fugue — Signature",
+                "el": "Fire"
+          }
+    ]
+  },
   "HSR-05": {
     "featured": [
           {
