@@ -44,7 +44,7 @@ const i18n = {
     "testi.title": "Transaction History",
     "testi.desc": "Confirmed handovers from real buyers across direct orders and escrow platforms.",
     "testi.tabAll": "All Proof",
-    "testi.tabReviews": "Itemku Reviews (547)",
+    "testi.tabReviews": "Itemku Reviews ({n})",
     "testi.tabChats": "Buyer Chats",
     "testi.showMore": "Show more reviews",
     "testi.showLess": "Show less",
@@ -93,7 +93,7 @@ const i18n = {
     "testi.title": "Riwayat Transaksi",
     "testi.desc": "Bukti serah terima sukses dari pembeli langsung maupun platform escrow.",
     "testi.tabAll": "Semua Bukti",
-    "testi.tabReviews": "Ulasan Itemku (547)",
+    "testi.tabReviews": "Ulasan Itemku ({n})",
     "testi.tabChats": "Chat Pembeli",
     "testi.showMore": "Tampilkan lebih banyak",
     "testi.showLess": "Tampilkan lebih sedikit",
@@ -119,6 +119,12 @@ function filterCount(key) {
   if (key === "catalog.filterAvail") return C.filter(c => c.status === "Available").length;
   if (key === "catalog.filterReserved") return C.filter(c => c.status === "Reserved").length;
   if (key === "catalog.filterSold") return C.filter(c => c.status === "Sold").length;
+  // Review total — derived from the rating breakdown so the tab label can never
+  // disagree with the rating strip rendered right below it.
+  if (key === "testi.tabReviews") {
+    const R = D.ratingSummary;
+    return R && R.breakdown ? R.breakdown.reduce((a, b) => a + b.count, 0) : "";
+  }
   return "";
 }
 

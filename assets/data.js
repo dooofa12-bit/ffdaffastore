@@ -227,9 +227,9 @@ window.SITE_CONFIG = {
   ratingSummary: {
     score: "4.9",
     max: "5.0",
-    count: "547",
+    count: "549",
     breakdown: [
-      { stars: 5, count: 521 },
+      { stars: 5, count: 523 },
       { stars: 4, count: 20 },
       { stars: 3, count: 3 },
       { stars: 2, count: 1 },
