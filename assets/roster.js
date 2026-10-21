@@ -3,6 +3,10 @@ window.ROSTERS = {
   "HSR-08": {
     "featured": [
           {
+                "name": "Pearl",
+                "el": "Ice"
+          },
+          {
                 "id": 1407,
                 "name": "Castorice",
                 "el": "Quantum",
@@ -176,6 +180,10 @@ window.ROSTERS = {
   },
   "HSR-07": {
     "featured": [
+          {
+                "name": "Pearl",
+                "el": "Ice"
+          },
           {
                 "id": 1408,
                 "name": "Phainon",
