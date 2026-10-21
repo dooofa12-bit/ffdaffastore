@@ -1288,11 +1288,6 @@ window.ROSTERS = {
         "id": 1208,
         "name": "Fu Xuan",
         "el": "Quantum"
-      },
-      {
-        "id": 1503,
-        "name": "Pearl",
-        "el": "Ice"
       }
     ],
     "cones": [
