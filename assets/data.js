@@ -22,7 +22,7 @@ window.SITE_CONFIG = {
   // Stats displayed on hero
   stats: {
     soldCount: "500+",
-    activeStock: "5",
+    activeStock: "6",
     satisfaction: "99.8%",
     avgProcessMinutes: "< 10m"
   },
@@ -219,6 +219,27 @@ window.SITE_CONFIG = {
         { src: "assets/img/shot/hsr08-lightcone.webp", label: "Light Cone" },
         { src: "assets/img/shot/hsr08-endgame.webp", label: "Memory of Chaos" },
         { src: "assets/img/shot/hsr08-story.webp", label: "Pengalaman Trailblaze" }
+      ]
+    },
+    {
+      id: "HSR-09",
+      title: "HSR Account #09 (Premium)",
+      server: "Asia",
+      trailblazeLevel: 70,
+      price: "Rp 850.000",
+      image: "assets/img/catalog-9.webp",
+      status: "Available",
+      limitedChars: 36,
+      signWeapons: 6,
+      highlights: ["Pearl (4.6)", "Silver Wolf LV.999 + Sign", "36 Limit / 6 Sign", "Archer E1"],
+      enHighlights: ["Pearl (4.6)", "Silver Wolf LV.999 + Sign", "36 Limit / 6 Sign", "Archer E1"],
+      desc: "Akun HSR Asia TL70 Premium, 36 Limited, 6 Signature. Silver Wolf LV.999 Sign, Dan Heng Imbibitor Lunae Sign, Acheron Sign, Aventurine Sign, Castorice Sign, Yao Guang Sign, Pearl, Archer E1, Story Planarcadia 4/?.",
+      enDesc: "Premium HSR Asia TL70 account, 36 Limited, 6 Signatures. Silver Wolf LV.999, Dan Heng Imbibitor Lunae, Acheron, Aventurine, Castorice and Yao Guang Signs, Pearl, Archer E1, Planarcadia Story 4/?.",
+      itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-akun-hsr-asia-tl70-premium-silver-wolf-lv999-36-limit-6-sign-pearl-archer-e1-termurah-ffdaffastore/4419883",
+      shots: [
+        { src: "assets/img/shot/hsr09-hero.webp", label: "Profile akun" },
+        { src: "assets/img/shot/hsr09-lightcone.webp", label: "Light Cone" },
+        { src: "assets/img/shot/hsr09-story.webp", label: "Pengalaman Trailblaze" }
       ]
     }
   ],
