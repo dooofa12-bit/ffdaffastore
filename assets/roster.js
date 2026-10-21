@@ -1597,6 +1597,11 @@ window.ROSTERS = {
         "el": "Quantum"
       },
       {
+        "id": 1006,
+        "name": "Silver Wolf",
+        "el": "Quantum"
+      },
+      {
         "id": 1503,
         "name": "Pearl",
         "el": "Ice"
