@@ -1582,6 +1582,12 @@ window.ROSTERS = {
         "name": "Seele",
         "el": "Quantum",
         "tag": "E1"
+      },
+      {
+        "id": 1015,
+        "name": "Archer",
+        "el": "Quantum",
+        "tag": "E1"
       }
     ],
     "others": [
