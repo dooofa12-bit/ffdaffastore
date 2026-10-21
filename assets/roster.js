@@ -1524,9 +1524,9 @@ window.ROSTERS = {
   "HSR-09": {
     "featured": [
       {
-        "id": 1006,
-        "name": "Silver Wolf",
-        "el": "Quantum",
+        "id": 1506,
+        "name": "Silver Wolf LV.999",
+        "el": "Imaginary",
         "tag": "E1 + Sign"
       },
       {
@@ -1550,12 +1550,6 @@ window.ROSTERS = {
       {
         "id": 1304,
         "name": "Aventurine",
-        "el": "Imaginary",
-        "tag": "+ Sign"
-      },
-      {
-        "id": 1213,
-        "name": "Dan Heng • Imbibitor Lunae",
         "el": "Imaginary",
         "tag": "+ Sign"
       },
@@ -1588,12 +1582,6 @@ window.ROSTERS = {
         "name": "Seele",
         "el": "Quantum",
         "tag": "E1"
-      },
-      {
-        "id": 1015,
-        "name": "Archer",
-        "el": "Quantum",
-        "tag": "E1"
       }
     ],
     "others": [
@@ -1603,49 +1591,24 @@ window.ROSTERS = {
         "el": "Quantum"
       },
       {
-        "id": 1313,
-        "name": "Sunday",
-        "el": "Imaginary"
+        "id": 1503,
+        "name": "Pearl",
+        "el": "Ice"
       },
       {
-        "id": 1310,
-        "name": "Firefly",
+        "id": 1501,
+        "name": "Sparxie",
         "el": "Fire"
-      },
-      {
-        "id": 1309,
-        "name": "Robin",
-        "el": "Physical"
-      },
-      {
-        "id": 1220,
-        "name": "Feixiao",
-        "el": "Wind"
-      },
-      {
-        "id": 1306,
-        "name": "Sparkle",
-        "el": "Quantum"
-      },
-      {
-        "id": 1305,
-        "name": "Dr. Ratio",
-        "el": "Imaginary"
-      },
-      {
-        "id": 1203,
-        "name": "Luocha",
-        "el": "Imaginary"
-      },
-      {
-        "id": 1414,
-        "name": "Dan Heng • Permansor Terrae",
-        "el": "Physical"
       },
       {
         "id": 1415,
         "name": "Cyrene",
         "el": "Ice"
+      },
+      {
+        "id": 1414,
+        "name": "Dan Heng • Permansor Terrae",
+        "el": "Physical"
       },
       {
         "id": 1413,
@@ -1668,14 +1631,44 @@ window.ROSTERS = {
         "el": "Fire"
       },
       {
-        "id": 1503,
-        "name": "Pearl",
-        "el": "Ice"
+        "id": 1313,
+        "name": "Sunday",
+        "el": "Imaginary"
       },
       {
-        "id": 1501,
-        "name": "Sparxie",
+        "id": 1310,
+        "name": "Firefly",
         "el": "Fire"
+      },
+      {
+        "id": 1309,
+        "name": "Robin",
+        "el": "Physical"
+      },
+      {
+        "id": 1306,
+        "name": "Sparkle",
+        "el": "Quantum"
+      },
+      {
+        "id": 1305,
+        "name": "Dr. Ratio",
+        "el": "Imaginary"
+      },
+      {
+        "id": 1220,
+        "name": "Feixiao",
+        "el": "Wind"
+      },
+      {
+        "id": 1213,
+        "name": "Dan Heng • Imbibitor Lunae",
+        "el": "Imaginary"
+      },
+      {
+        "id": 1203,
+        "name": "Luocha",
+        "el": "Imaginary"
       }
     ]
   }
