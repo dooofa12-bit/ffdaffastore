@@ -1674,7 +1674,8 @@ window.ROSTERS = {
       {
         "id": 1213,
         "name": "Dan Heng • Imbibitor Lunae",
-        "el": "Imaginary"
+        "el": "Imaginary",
+        "tag": "+ Sign"
       },
       {
         "id": 1203,
