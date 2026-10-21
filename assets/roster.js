@@ -1161,6 +1161,12 @@ window.ROSTERS = {
         "tag": "E1 + Signature"
       },
       {
+        "id": 1506,
+        "name": "Silver Wolf LV.999",
+        "el": "Imaginary",
+        "tag": "+ Signature"
+      },
+      {
         "id": 1313,
         "name": "Sunday",
         "el": "Imaginary",
@@ -1181,8 +1187,7 @@ window.ROSTERS = {
       {
         "id": 1006,
         "name": "Silver Wolf",
-        "el": "Quantum",
-        "tag": "+ Signature"
+        "el": "Quantum"
       },
       {
         "id": 1502,
