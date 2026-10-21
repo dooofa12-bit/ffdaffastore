@@ -22,7 +22,7 @@ window.SITE_CONFIG = {
   // Stats displayed on hero
   stats: {
     soldCount: "500+",
-    activeStock: "6",
+    activeStock: "5",
     satisfaction: "99.8%",
     avgProcessMinutes: "< 10m"
   },
@@ -116,7 +116,7 @@ window.SITE_CONFIG = {
       trailblazeLevel: 70,
       price: "Rp 850.000",
       image: "assets/img/catalog-4.webp",
-      status: "Available",
+      status: "Sold",
       limitedChars: 37,
       signWeapons: 9,
       highlights: ["Rin Tohsaka + Sign", "Archer + Sign", "Acheron E1 + Sign", "UID Sepuh 8034"],
