@@ -114,7 +114,7 @@ window.SITE_CONFIG = {
       title: "HSR Account #04 (Premium)",
       server: "Asia",
       trailblazeLevel: 70,
-      price: "Rp 850.000",
+      price: "Rp 900.000",
       image: "assets/img/catalog-4.webp",
       status: "Available",
       limitedChars: 37,
