@@ -46,8 +46,7 @@ window.ROSTERS = {
       {
         "id": 1308,
         "name": "Acheron",
-        "el": "Thunder",
-        "tag": "+ Signature"
+        "el": "Thunder"
       }
     ],
     "others": [
@@ -169,14 +168,14 @@ window.ROSTERS = {
         "owner": "Phainon"
       },
       {
-        "id": "23024",
-        "name": "Along the Passing Shore",
-        "owner": "Acheron"
+        "id": "23042",
+        "name": "Long May Rainbows Adorn the Sky",
+        "owner": "Hyacine"
       },
       {
-        "id": "23051",
-        "name": "Though Worlds Apart",
-        "owner": "Castorice"
+        "id": "23037",
+        "name": "Into the Unreachable Veil",
+        "owner": "The Herta"
       }
     ]
   },
