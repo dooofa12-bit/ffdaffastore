@@ -22,7 +22,7 @@ window.SITE_CONFIG = {
   // Stats displayed on hero
   stats: {
     soldCount: "500+",
-    activeStock: "3",
+    activeStock: "5",
     satisfaction: "99.8%",
     avgProcessMinutes: "< 10m"
   },
@@ -245,6 +245,40 @@ window.SITE_CONFIG = {
         { src: "assets/img/shot/hsr09-lightcone.webp", label: "Light Cone" },
         { src: "assets/img/shot/hsr09-story.webp", label: "Pengalaman Trailblaze" }
       ]
+    },
+    {
+      id: "HSR-10",
+      title: "HSR Account #10 (Budget)",
+      server: "Asia",
+      trailblazeLevel: 70,
+      price: "Rp 450.000",
+      image: "assets/img/catalog-10.webp",
+      status: "Available",
+      limitedChars: 28,
+      signWeapons: 3,
+      highlights: ["Ashveil E4 + Sign", "Acheron E1 + Sign", "Firefly + Sign", "Veteran UID 8XXX"],
+      enHighlights: ["Ashveil E4 + Sign", "Acheron E1 + Sign", "Firefly + Sign", "Veteran UID 8XXX"],
+      desc: "Akun HSR Asia TL70, 28 Limited, 3 Signature. Firefly Sign, Acheron E1 Sign, Ashveil E4 Sign, Huohuo E1, Blade E1, Silver Wolf E1, Gilgamesh, Dan Heng PT, Rappa, Boothill, Sparkle, Dr. Ratio, Aventurine, Ruan Mei, Fugue, Jingliu, Fu Xuan, Luocha, Topaz, Seele. Endgame Clear, Story Planarcadia, Veteran UID 8XXX, anti-HB.",
+      enDesc: "HSR Asia TL70 account, 28 Limited, 3 Signatures. Firefly, Acheron E1, Ashveil E4 Signs, Huohuo E1, Blade E1, Silver Wolf E1, Gilgamesh, Dan Heng PT, Rappa, Boothill, Sparkle, Dr. Ratio, Aventurine, Ruan Mei, Fugue, Jingliu, Fu Xuan, Luocha, Topaz, Seele. Endgame Clear, Planarcadia Story, Veteran UID 8XXX, anti-HB.",
+      itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-hsr-asia-account-tl70-28-limited-3-signature-ashveil-e4-sign-acheron-e1-sign-uid-sepuh-8002-anti-hb-termurah-ffdaffastore/4423948",
+      shots: []
+    },
+    {
+      id: "HSR-11",
+      title: "HSR Account #11 (Premium)",
+      server: "Asia",
+      trailblazeLevel: 70,
+      price: "Rp 900.000",
+      image: "assets/img/catalog-11.webp",
+      status: "Available",
+      limitedChars: 41,
+      signWeapons: 5,
+      highlights: ["Silver Wolf LV.999 + Sign", "Yao Guang + Sign", "Castorice + Sign", "41 Limit / 5 Sign"],
+      enHighlights: ["Silver Wolf LV.999 + Sign", "Yao Guang + Sign", "Castorice + Sign", "41 Limit / 5 Sign"],
+      desc: "Akun HSR Asia TL70 Premium, 41 Limited, 5 Signature. Silver Wolf LV.999 Sign, Yao Guang Sign, Castorice Sign, Acheron Sign, Sunday Sign, Sparkle E1, Ruan Mei E1, Fu Xuan E1, Blade E1, Seele E2, Archer E1, Rin Tohsaka, Saber, Sparxie, Cyrene, Dan Heng PT, Dan Heng IL, Evernight, Cerydra, Hyacine, Phainon, Anaxa, Tribbie, The Herta, The Dahlia, Jade, Firefly, Robin, Dr. Ratio, Aventurine, Huohuo, Jing Yuan, Silver Wolf, Kafka. Endgame Clear, Story Planarcadia, Veteran UID 8041, anti-HB.",
+      enDesc: "Premium HSR Asia TL70 account, 41 Limited, 5 Signatures. Silver Wolf LV.999, Yao Guang, Castorice, Acheron and Sunday Signs, Sparkle E1, Ruan Mei E1, Fu Xuan E1, Blade E1, Seele E2, Archer E1, Rin Tohsaka, Saber, Sparxie, Cyrene, Dan Heng PT, Dan Heng IL, Evernight, Cerydra, Hyacine, Phainon, Anaxa, Tribbie, The Herta, The Dahlia, Jade, Firefly, Robin, Dr. Ratio, Aventurine, Huohuo, Jing Yuan, Silver Wolf, Kafka. Endgame Clear, Planarcadia Story, Veteran UID 8041, anti-HB.",
+      itemkuUrl: "https://www.itemku.com/id/dagangan/honkai-star-rail-asia-hsr-asia-account-premium-tl70-41-limited-5-signature-premium-elation-premium-remembrance-uid-sepuh-8002-anti-hb-termurah-ffdaffastore/4424307",
+      shots: []
     }
   ],
 
