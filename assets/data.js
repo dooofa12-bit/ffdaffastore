@@ -22,7 +22,7 @@ window.SITE_CONFIG = {
   // Stats displayed on hero
   stats: {
     soldCount: "500+",
-    activeStock: "7",
+    activeStock: "5",
     satisfaction: "99.8%",
     avgProcessMinutes: "< 10m"
   },
@@ -117,7 +117,8 @@ window.SITE_CONFIG = {
       trailblazeLevel: 70,
       price: "Rp 850.000",
       image: "assets/img/catalog-4.webp",
-      status: "Available",
+      status: "Sold",
+      soldAt: "2026-11-01T16:15:00Z",
       limitedChars: 37,
       signWeapons: 9,
       highlights: ["Rin Tohsaka + Sign", "Archer + Sign", "Acheron E1 + Sign", "UID Sepuh 8034"],
@@ -163,7 +164,8 @@ window.SITE_CONFIG = {
       trailblazeLevel: 70,
       price: "Rp 750.000",
       image: "assets/img/catalog-6.webp",
-      status: "Available",
+      status: "Sold",
+      soldAt: "2026-11-01T16:15:00Z",
       limitedChars: 26,
       signWeapons: 11,
       highlights: ["170x Golden Ticket", "2x GCS", "Acheron E2 + Sign", "Castorice + Sign"],
