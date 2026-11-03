@@ -22,7 +22,7 @@ window.SITE_CONFIG = {
   // Stats displayed on hero
   stats: {
     soldCount: "500+",
-    activeStock: "5",
+    activeStock: "4",
     satisfaction: "99.8%",
     avgProcessMinutes: "< 10m"
   },
@@ -306,7 +306,8 @@ window.SITE_CONFIG = {
       trailblazeLevel: 53,
       price: "Rp 150.000",
       image: "assets/img/catalog-13.webp",
-      status: "Available",
+      status: "Sold",
+      soldAt: "2026-11-03T14:10:00Z",
       limitedChars: 13,
       signWeapons: 1,
       highlights: ["Silver Wolf LV.999 E2 + Sign", "Castorice", "Sparkle", "Story Penacony"],
