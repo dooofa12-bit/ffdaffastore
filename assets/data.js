@@ -232,7 +232,7 @@ window.SITE_CONFIG = {
       title: "HSR Account #09 (Premium)",
       server: "Asia",
       trailblazeLevel: 70,
-      price: "Rp 800.000",
+      price: "Rp 799.000",
       image: "assets/img/catalog-9.webp",
       status: "Sold",
       soldAt: "2026-11-05T07:28:00Z",
