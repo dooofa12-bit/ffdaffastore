@@ -22,7 +22,7 @@ window.SITE_CONFIG = {
   // Stats displayed on hero
   stats: {
     soldCount: "500+",
-    activeStock: "4",
+    activeStock: "3",
     satisfaction: "99.8%",
     avgProcessMinutes: "< 10m"
   },
@@ -234,7 +234,8 @@ window.SITE_CONFIG = {
       trailblazeLevel: 70,
       price: "Rp 800.000",
       image: "assets/img/catalog-9.webp",
-      status: "Available",
+      status: "Sold",
+      soldAt: "2026-11-05T07:28:00Z",
       limitedChars: 36,
       signWeapons: 6,
       highlights: ["Pearl (4.6)", "Silver Wolf LV.999 + Sign", "36 Limit / 6 Sign", "Archer E1"],
